@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALO Organization - Projects</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.css">
+
+    <style>
+        /* Custom scrollbar for better look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #15803d; border-radius: 10px; }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+    <div class="bg-green-900 text-white text-sm">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 py-2 gap-2">
+            <div class="flex flex-wrap gap-4 hidden md:flex">
+                <span><i class="fa-solid fa-location-dot mr-1"></i> Naogaon, Bangladesh</span>
+                <span><i class="fa-solid fa-phone mr-1"></i> +8801712987908</span>
+                <span><i class="fa-solid fa-envelope mr-1"></i> alo.bd433@gmail.com</span>
+            </div>
+            <div class="flex gap-4 text-lg">
+                <i class="fa-brands fa-facebook cursor-pointer hover:text-orange-400 transition"></i>
+                <i class="fa-brands fa-youtube cursor-pointer hover:text-orange-400 transition"></i>
+                <i class="fa-brands fa-instagram cursor-pointer hover:text-orange-400 transition"></i>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10  rounded-full flex items-center justify-center text-white font-bold"> <img src="/ALO_LOGO_PNG.png" class="h-10"></div>
+                    <span class="font-semibold  md:block">ALO Organization</span>
+                </div>
+                <ul class="hidden md:flex gap-8 font-medium items-center">
+                    <li><a href="/" class="hover:text-green-700 transition">Home</a></li>
+                    <li><a href="#" class="hover:text-green-700 transition">About</a></li>
+                    <li><a href="#" class="text-green-700 font-bold border-b-2 border-green-700">Projects</a></li>
+                    <li><a href="#" class="hover:text-green-700 transition">Contact</a></li>
+                    <li><a href="#" class="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600 transition shadow-md">Donate Now</a></li>
+                </ul>
+                <button id="menuBtn" class="md:hidden text-2xl text-green-900"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden pb-6 space-y-4 animate-fade-in">
+                <a href="/" class="block font-medium hover:text-green-700">Home</a>
+                <a href="#" class="block font-medium hover:text-green-700">About</a>
+                <a href="#" class="block font-medium text-green-700">Projects</a>
+                <a href="#" class="block font-medium hover:text-green-700">Contact</a>
+                <a href="#" class="block bg-orange-500 text-white text-center py-2 rounded">Donate Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+<section
+class="relative bg-[url('/IMG_2632.JPG.jpeg')] bg-cover bg-center h-[55vh] flex items-center">
+
+<div class="absolute inset-0 bg-black/60"></div>
+
+<div class="relative max-w-7xl mx-auto px-4 text-white">
+  <h1 class="text-3xl md:text-5xl font-bold mb-4">
+    Together We Can Build a Just &<br>
+     Equal Society
+  </h1>
+
+  <p class="max-w-xl mb-6">
+    ALO is a rights-based development organization committed to empowering marginalized and indigenous communities to create a peaceful and inclusive society—free from discrimination and poverty—where everyone enjoys equal access to justice and opportunities. 
+  </p>
+
+  <div class="flex gap-4">
+    <a class="bg-green-700 px-6 py-3 rounded">Our Projects</a>
+    <a class="bg-orange-500 px-6 py-3 rounded">Donate Now</a>
+  </div>
+</div>
+
+</section>
+
+    <main class="container mx-auto px-4 py-16 max-w-6xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold uppercase tracking-widest text-gray-800">Our Impactful Projects</h2>
+            <p class="text-gray-500 mt-2">Empowering communities through sustainable development</p>
+            <div class="w-24 h-1.5 bg-green-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <% if(projects && projects.length > 0) { %>
+            <% projects.forEach(project => { %>
+                
+                <div class="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100 mb-16 transition-all hover:shadow-2xl">
+                    
+                    <div class="relative h-64 md:h-[450px] overflow-hidden">
+                        <img src="/uploads/<%= project.coverimage %>" alt="<%= project.projectTitle %>" class="w-full  object-cover center transition-transform duration-500 hover:scale-105  object-cover space-y-4">
+
+                        <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent w-full p-6">
+                            <span class="bg-orange-500 text-white px-3 py-1 rounded-md text-sm font-bold uppercase tracking-wider mb-2 inline-block">
+                                <%= project.projectTitle %>
+                            </span>
+                            <h3 class="text-2xl md:text-4xl font-bold text-white"><%= project.projectname  %></h3>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 md:p-12">
+                        <div class="max-w-4xl">
+                            <p class="text-gray-600 leading-relaxed text-lg mb-8">
+                                <%= project.description %>
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 border-y border-gray-100 py-8 mb-10">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-700 text-xl">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-gray-400 uppercase">Project Area</span>
+                                    <p class="font-semibold text-gray-800"><%= project.projectarea %></p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-xl">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-gray-400 uppercase">Beneficiaries</span>
+                                    <p class="font-semibold text-gray-800"><%= project.beneficiary %></p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl">
+                                    <i class="fa-solid fa-bullseye"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-gray-400 uppercase">Primary Goal</span>
+                                    <p class="font-semibold text-gray-800"><%= project.projectgoal %></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <% if(project.projectobjectives && project.projectobjectives.length > 0) { %>
+                        <div class="mb-10">
+                            <h4 class="text-xl font-bold mb-6 text-gray-800 flex items-center gap-2">
+                                <span class="w-8 h-1 bg-green-600"></span> Key Objectives
+                            </h4>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <% project.projectobjectives.forEach(obj => { %>
+                                    <li class="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border-l-4 border-green-500">
+                                        <i class="fa-solid fa-circle-check text-green-600"></i>
+                                        <span class="text-gray-700 font-medium"><%= obj %></span>
+                                    </li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                        <% } %>
+
+                        <% if(project.extraimage && project.extraimage.length > 0) { %>
+                        <div class="mt-12">
+                            <h4 class="text-lg font-bold mb-4 text-gray-400 uppercase tracking-widest italic text-center">Visual Highlights</h4>
+                            <div class="project-gallery grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <% project.extraimage.forEach(img => { %>
+                                    <a href="/uploads/<%= img %>" class="group relative h-40 rounded-xl overflow-hidden shadow-md border-2 border-transparent hover:border-green-500 transition-all">
+                                        <img src="/uploads/<%= img %>" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Gallery Image">
+                                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                            <i class="fa-solid fa-expand text-white text-2xl"></i>
+                                        </div>
+                                    </a>
+                                <% }) %>
+                            </div>
+                        </div>
+                        <% } %>
+
+                    </div>
+                </div>
+
+            <% }) %>
+        <% } else { %>
+            <div class="text-center py-20 bg-white rounded-2xl shadow-sm border border-dashed border-gray-300">
+                <i class="fa-solid fa-folder-open text-gray-300 text-6xl mb-4"></i>
+                <p class="text-gray-500 text-xl font-medium">No projects available at this moment.</p>
+            </div>
+        <% } %>
+    </main>
+
+    <footer class="bg-gray-900 text-white text-center py-10 mt-10">
+        <div class="mb-6 flex justify-center gap-6 text-2xl">
+            <i class="fa-brands fa-facebook hover:text-orange-500 cursor-pointer"></i>
+            <i class="fa-brands fa-twitter hover:text-orange-500 cursor-pointer"></i>
+            <i class="fa-brands fa-linkedin hover:text-orange-500 cursor-pointer"></i>
+        </div>
+        <p class="text-gray-400">© 2026 ALO Organization — Building a Just & Equal Society</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById("menuBtn");
+        const menu = document.getElementById("mobileMenu");
+        btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+
+        // Initialize Lightbox for all project galleries
+        document.addEventListener('DOMContentLoaded', function() {
+            var lightbox = new SimpleLightbox('.project-gallery a', {
+                overlayOpacity: 0.9,
+                showCounter: true,
+                uniqueImages: true,
+                fadeSpeed: 300
+            });
+        });
+    </script>
+
+</body>
+</html>

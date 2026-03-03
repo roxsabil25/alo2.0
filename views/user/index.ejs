@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ALO Organization</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Fontawesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body class="bg-gray-50">
+
+<!-- ================= TOP BAR ================= -->
+<div class="bg-green-900 text-white text-sm">
+  <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 py-2 gap-2">
+
+    <div class="flex flex-wrap gap-4 hidden   md:block">
+      <span><i class="fa-solid fa-location-dot mr-1"></i> Naogaon, Bangladesh</span>
+      <span><i class="fa-solid fa-phone mr-1"></i> +8801712987908</span>
+      <span><i class="fa-solid fa-envelope mr-1"></i> alo.bd433@gmail.com</span>
+    </div>
+
+    <div class="flex gap-3 text-lg">
+      <i class="fa-brands fa-facebook cursor-pointer"></i>
+      <i class="fa-brands fa-youtube cursor-pointer"></i>
+      <i class="fa-brands fa-instagram cursor-pointer"></i>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4">
+
+  <div class="flex justify-between items-center py-4">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <img src="/ALO_LOGO_PNG.png" class="h-10">
+      <span class="font-semibold  md:block">
+        ALO Organization
+      </span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-8 font-medium">
+      <li><a href="#" class="hover:text-green-700">Home</a></li>
+      <li><a href="#" class="hover:text-green-700">About</a></li>
+      <li><a href="#" class="hover:text-green-700">Projects</a></li>
+      <li><a href="#" class="hover:text-green-700">Contact</a></li>
+      <li>
+        <a href="#" class="bg-orange-500 text-white px-4 py-2 rounded">
+          Donate
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden pb-4">
+    <ul class="flex flex-col gap-4 font-medium">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a class="bg-orange-500 text-white px-4 py-2 rounded inline-block">Donate</a></li>
+    </ul>
+  </div>
+
+</div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+<section
+class="relative bg-[url('/heroBg.jpeg')] bg-cover bg-center h-[60vh] flex items-center">
+
+<div class="absolute inset-0 bg-black/60"></div>
+
+<div class="relative max-w-7xl mx-auto px-4 text-white">
+  <h1 class="text-3xl md:text-5xl font-bold mb-4">
+    Together We Can Build a Just &<br>
+     Equal Society
+  </h1>
+
+  <p class="max-w-xl mb-6">
+    ALO is a rights-based development organization committed to empowering marginalized and indigenous communities to create a peaceful and inclusive society—free from discrimination and poverty—where everyone enjoys equal access to justice and opportunities. 
+  </p>
+
+  <div class="flex gap-4">
+    <a class="bg-green-700 px-6 py-3 rounded">Our Projects</a>
+    <a class="bg-orange-500 px-6 py-3 rounded">Donate Now</a>
+  </div>
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section class="py-10">
+<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+
+<div>
+<h2 class="text-3xl font-bold text-green-800 mb-4">About ALO</h2>
+<p class="text-gray-600 mb-4">
+ALO- Assistance for Landless Organization is a Non-Profit dedicated to empowering the Landless and disadvantaged communities in Bangladesh...
+</p>
+
+<a href="#" class="text-green-700 font-semibold">
+Read More →
+</a>
+</div>
+
+<img src="/IMG_2747.JPG.jpeg"
+class="rounded-xl shadow-lg w-full h-64 object-cover">
+
+</div>
+</section>
+
+
+<!-- ================= FOCUS AREA ================= -->
+<section class="bg-gray-100 py-16">
+
+<div class="max-w-7xl mx-auto px-4 text-center">
+<h2 class="text-3xl font-bold text-green-800 mb-10">
+Our Focus Areas
+</h2>
+
+<div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+<i class="fa-solid fa-landmark text-3xl text-green-700 mb-3"></i>
+<h3 class="font-semibold">Livelihood Development &
+Food Security
+</h3>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow ">
+<i class="fa-solid fa-seedling text-3xl text-green-700 mb-3"></i>
+<h3>Climate-Smart & Sustainable Agriculture
+</h3>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<i class="fa-solid fa-scale-balanced text-3xl text-green-700 mb-3"></i>
+<h3>Legal Aid & Child Rights
+</h3>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<i class="fa-solid fa-leaf text-3xl text-green-700 mb-3"></i>
+<h3>TEVET
+(Technical, Entrepreneurial, and Vocational Education and Training)
+</h3>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<i class="fa-solid fa-leaf text-3xl text-green-700 mb-3"></i>
+
+<h3>Peacebuilding & Social Harmony
+
+</h3>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= IMPACT ================= -->
+<section class="py-16">
+<div class="max-w-7xl mx-auto px-4 text-center">
+
+<h2 class="text-3xl font-bold text-green-800 mb-10">
+Our Impact
+</h2>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+<div class="bg-green-50 p-6 rounded-lg">
+<h3 class="text-3xl font-bold text-green-800">5000+</h3>
+<p>People Helped</p>
+</div>
+
+<div class="bg-green-50 p-6 rounded-lg">
+<h3 class="text-3xl font-bold text-green-800">120+</h3>
+<p>Training Programs</p>
+</div>
+
+<div class="bg-green-50 p-6 rounded-lg">
+<h3 class="text-3xl font-bold text-green-800">1000+</h3>
+<p>Beneficiaries</p>
+</div>
+
+<div class="bg-green-50 p-6 rounded-lg">
+<h3 class="text-3xl font-bold text-green-800">1+</h3>
+<p>District Covered</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= ONGOING PROJECTS ================= -->
+<section class="py-16 bg-gray-100">
+
+<div class="max-w-7xl mx-auto px-4">
+
+  <!-- Section Title -->
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold text-green-800">
+      Ongoing Projects
+    </h2>
+    <p class="text-gray-600 mt-2">
+      Our current initiatives creating real impact in communities
+    </p>
+  </div>
+
+  <!-- Project Cards -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Project 1 -->
+<% projects.forEach(function(project){ %>
+
+<div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
+      
+      <img src="/uploads/<%= project.coverimage %>"
+           class="h-56 w-full object-cover">
+
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">
+          <%= project.projectTitle %>
+        </h3>
+
+        <p class="text-gray-600 mb-4">
+          <%= project.description %>
+        </p>
+
+        <a href="/showprojects/<%= project._id %>"
+           class="inline-block bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600">
+           Learn More →
+        </a>
+      </div>
+</div>
+
+<% }) %>
+
+
+    <!-- Project 2 -->
+    <!-- <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
+      <img src="/project02.jpeg"
+           class="h-56 w-full object-cover">
+
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">
+          Vermicompost Initiative
+        </h3>
+
+        <p class="text-gray-600 mb-4">
+          Promoting eco-friendly organic fertilizer production
+          to improve agricultural sustainability.
+        </p>
+
+        <a href="#"
+           class="inline-block bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600">
+           Learn More →
+        </a>
+      </div>
+    </div>
+
+
+    <!-- Project 3 -->
+    <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
+      <img src="/project03.JPG.jpeg"
+           class="h-56 w-full object-cover">
+
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">
+          Women's Empowerment Program
+        </h3>
+
+        <p class="text-gray-600 mb-4">
+          Supporting women through skills development,
+          leadership training and economic opportunities.
+        </p>
+
+        <a href="#"
+           class="inline-block bg-green-700 text-white px-5 py-2 rounded hover:bg-green-800">
+           Learn More →
+        </a>
+      </div>
+    </div> -->
+
+
+
+  </div>
+
+</div>
+</section>
+
+
+<!-- ================= CTA ================= -->
+<section class=" bg-[url('/teaTree.jpeg')] bg-cover bg-center  text-white text-center ">
+<div class="bg bg-green-900/70 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">
+Together We Can Build a Just & Equal Society
+</h2>
+
+<div class="flex justify-center gap-4 flex-wrap">
+<a class="bg-orange-500 px-6 py-3 rounded">Donate Now</a>
+<a class="bg-green-600 px-6 py-3 rounded">Become Volunteer</a>
+</div>
+</div>
+</section>
+
+
+<footer class="bg-gray-900 text-white text-center py-4">
+© 2026 ALO — All Rights Reserved
+</footer>
+
+
+<!-- ================= MOBILE MENU SCRIPT ================= -->
+<script>
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("mobileMenu");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+</script>
+
+</body>
+</html>

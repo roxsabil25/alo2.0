@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project - ALO Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-900">
+
+    <section class="projectadd min-h-screen py-12 px-4">
+        <div class="container mx-auto max-w-3xl">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+                <div class="bg-green-800 p-6">
+                    <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-plus-circle"></i> Add New Project
+                    </h2>
+                    <p class="text-green-100 text-sm mt-1">Fill in the details below to create a new impact project.</p>
+                </div>
+
+                <form action="/admin/project/add" method="post" enctype="multipart/form-data" class="p-8 space-y-6">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label for="projectTitle" class="text-sm font-bold text-slate-700 uppercase tracking-wide">Project Title</label>
+                            <input type="text" id="projectTitle" name="projectTitle" placeholder="e.g. Women's Empowerment" 
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-all bg-slate-50">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="projectname" class="text-sm font-bold text-slate-700 uppercase tracking-wide">Project Short Name</label>
+                            <input type="text" id="projectname" name="projectname" placeholder="e.g. WEP-2024"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-all bg-slate-50">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="description" class="text-sm font-bold text-slate-700 uppercase tracking-wide">Description</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Write project summary here..."
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-all bg-slate-50"></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="space-y-2">
+                            <label for="projectgoal" class="text-sm font-bold text-slate-700 uppercase tracking-wide">Project Goal</label>
+                            <input type="text" id="projectgoal" name="projectgoal" placeholder="Main goal"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-all bg-slate-50">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="projectarea" class="text-sm font-bold text-slate-700 uppercase tracking-wide">Project Area</label>
+                            <input type="text" id="projectarea" name="projectarea" placeholder="Location"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-all bg-slate-50">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="beneficiary" class="text-sm font-bold text-slate-700 uppercase tracking-wide">Beneficiaries</label>
+                            <input type="text" id="beneficiary" name="beneficiary" placeholder="Target group"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-all bg-slate-50">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="projectobjectives" class="text-sm font-bold text-slate-700 uppercase tracking-wide">Project Objectives</label>
+                        <p class="text-xs text-slate-500 italic mb-2">Note: Separate objectives with commas or new lines if needed.</p>
+                        <textarea id="projectobjectives" name="projectobjectives" rows="3" placeholder="Objective 1, Objective 2..."
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none transition-all bg-slate-50"></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 bg-slate-100 rounded-xl border-2 border-dashed border-slate-300">
+                        <div class="space-y-3">
+                            <label for="coverimage" class="flex items-center gap-2 text-sm font-bold text-slate-700">
+                                <i class="fa-solid fa-image text-green-600"></i> Cover Image
+                            </label>
+                            <input type="file" id="coverimage" name="coverimage" accept="image/*" 
+                                class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100 cursor-pointer">
+                        </div>
+
+                        <div class="space-y-3">
+                            <label for="extraimages" class="flex items-center gap-2 text-sm font-bold text-slate-700">
+                                <i class="fa-solid fa-images text-blue-600"></i> Gallery Images (Multiple)
+                            </label>
+                            <input type="file" id="extraimages" name="extraimage" accept="image/*" multiple
+                                class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer">
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-orange-200 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Save & Publish Project
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+            
+            <div class="text-center mt-6">
+                <a href="/admin/dashboard" class="text-slate-500 hover:text-green-700 transition font-medium">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+<section class="py-16 bg-gray-100">
+
+<div class="max-w-7xl mx-auto px-4">
+
+  <!-- Section Title -->
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold text-green-800">
+      Ongoing Projects
+    </h2>
+    <p class="text-gray-600 mt-2">
+      Our current initiatives creating real impact in communities
+    </p>
+  </div>
+
+  <!-- Project Cards -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Project 1 -->
+<% projects.forEach(function(project){ %>
+
+<div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
+      
+      <img src="/uploads/<%= project.coverimage %>"
+           class="h-56 w-full object-cover">
+
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">
+          <%= project.projectTitle %>
+        </h3>
+
+        <p class="text-gray-600 mb-4">
+          <%= project.description %>
+        </p>
+
+        <a href="/showprojects/<%= project._id %>"
+           class="inline-block bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600">
+           Learn More →
+        </a>
+        <a href="/admindelete/<%= project._id %>"
+           class="inline-block bg-red-700 text-white px-5 py-2 rounded hover:bg-red-800">
+           delete →
+        </a>
+      </div>
+</div>
+
+<% }) %>
+
+
+    <!-- Project 2 -->
+    <!-- <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
+      <img src="/project02.jpeg"
+           class="h-56 w-full object-cover">
+
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">
+          Vermicompost Initiative
+        </h3>
+
+        <p class="text-gray-600 mb-4">
+          Promoting eco-friendly organic fertilizer production
+          to improve agricultural sustainability.
+        </p>
+
+        <a href="#"
+           class="inline-block bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600">
+           Learn More →
+        </a>
+      </div>
+    </div>
+
+
+    <!-- Project 3 -->
+    <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
+      <img src="/project03.JPG.jpeg"
+           class="h-56 w-full object-cover">
+
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">
+          Women's Empowerment Program
+        </h3>
+
+        <p class="text-gray-600 mb-4">
+          Supporting women through skills development,
+          leadership training and economic opportunities.
+        </p>
+
+        <a href="#"
+           class="inline-block bg-green-700 text-white px-5 py-2 rounded hover:bg-green-800">
+           Learn More →
+        </a>
+
+        
+      </div>
+    </div> -->
+
+
+
+  </div>
+
+</div>
+</section>
+
+
+</body>
+</html>
