@@ -168,6 +168,10 @@ app.get('/admindelete/:id', async (req,res)=>{
     res.redirect('/admin/project/add');
 });
 
+
+app.get('/healthz', (req, res) => {
+  res.status(200).send("OK");
+});
 // Server Start
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
