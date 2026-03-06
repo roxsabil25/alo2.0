@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALO Organization</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+  .marquee {
+    display: flex;
+    width: max-content; /* এটি কন্টেন্ট অনুযায়ী ওয়াইড সেট করবে */
+    animation: scroll 25s linear infinite;
+  }
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .marquee:hover {
+    animation-play-state: paused;
+  }
+</style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ================= TOP BAR ================= -->
+  <div class="bg-green-900 text-white text-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 py-2 gap-2">
+      <!-- Contact info: hidden on mobile, flex on medium+ -->
+      <div class="hidden md:flex flex-wrap gap-4">
+        <span><i class="fa-solid fa-location-dot mr-1"></i> Naogaon, Bangladesh</span>
+        <span><i class="fa-solid fa-phone mr-1"></i> +8801712987908</span>
+        <span><i class="fa-solid fa-envelope mr-1"></i> alo.bd433@gmail.com</span>
+      </div>
+      <!-- Social icons (always visible) -->
+      <div class="flex gap-3 text-lg">
+        <i class="fa-brands fa-facebook cursor-pointer"></i>
+        <i class="fa-brands fa-youtube cursor-pointer"></i>
+        <i class="fa-brands fa-instagram cursor-pointer"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img src="/ALO_LOGO_PNG.png" class="h-10" alt="ALO logo">
+          <span class="font-semibold  sm:inline">ALO Organization</span>
+        </div>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-8 font-medium items-center">
+          <li><a href="#" class="hover:text-green-700">Home</a></li>
+          <li><a href="#" class="hover:text-green-700">About</a></li>
+          <li><a href="#" class="hover:text-green-700">Projects</a></li>
+          <li><a href="#" class="hover:text-green-700">Contact</a></li>
+          <li><a href="#" class="bg-orange-500 text-white px-4 py-2 rounded">Donate</a></li>
+        </ul>
+        <!-- Mobile Button -->
+        <button id="menuBtn" class="md:hidden text-2xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden pb-4">
+        <ul class="flex flex-col gap-4 font-medium">
+          <li><a href="/" class="block py-2">Home</a></li>
+          <li><a href="/about" class="block py-2">About</a></li>
+          <li><a href="#" class="block py-2">Projects</a></li>
+          <li><a href="#" class="block py-2">Contact</a></li>
+          <li><a class="bg-orange-500 text-white px-4 py-2 rounded inline-block text-center">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+ <section class="relative bg-emerald-300 text-white pt-[60px] pb-[5px] md:py-36 px-6 bg-[url('/project02.JPG.jpeg')] bg-cover bg-center">
+  <div class="absolute inset-0 bg-emerald-950/80"></div> <div class="relative max-w-4xl mx-auto z-10">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">ALO – Assistance for Landless Organization</h1>
+    <p class="text-lg md:text-xl font-light mb-10">Empowering the Landless Since 1996</p>
+
+    
+  </div>
+</section>
+
+<section class="overflow-hidden bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 ">
+  <div class="marquee flex gap-12 whitespace-nowrap text-sm md:text-base">
+    <div class="flex gap-12">
+      <p><span class="font-bold text-orange-400">Established:</span> 1996</p>
+      <p><span class="font-bold text-orange-400">Registered:</span> 1999 (Dept. of Social Services, Govt. of Bangladesh)</p>
+      <p><span class="font-bold text-orange-400">NGOAB Reg:</span> No. 3579 (17 Feb 2026)</p>
+      <p><span class="font-bold text-orange-400">Head Office:</span> Par-Boalia, Naogaon Sadar, Bangladesh</p>
+      <p><span class="font-bold text-orange-400">Operational Area:</span> Naogaon District</p>
+    </div>
+    <div class="flex gap-12" aria-hidden="true">
+      <p><span class="font-bold text-orange-400">Established:</span> 1996</p>
+      <p><span class="font-bold text-orange-400">Registered:</span> 1999 (Dept. of Social Services, Govt. of Bangladesh)</p>
+      <p><span class="font-bold text-orange-400">NGOAB Reg:</span> No. 3579 (17 Feb 2026)</p>
+      <p><span class="font-bold text-orange-400">Head Office:</span> Par-Boalia, Naogaon Sadar, Bangladesh</p>
+      <p><span class="font-bold text-orange-400">Operational Area:</span> Naogaon District</p>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= HISTORY (Image right) ================= -->
+  <section class="max-w-6xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Brief History of Our Development Journey</h2>
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <p class="text-gray-600 leading-relaxed">ALO is a grassroots, rights-based development organization working at the frontline of poverty reduction, climate resilience, and indigenous rights in northwest Bangladesh.</p>
+      <div class="bg-gray-300 h-64 rounded-lg overflow-hidden">
+        <img class="w-full h-full object-cover" src="/WhatsApp Image 2026-03-03 at 12.10.36 AM.jpeg" alt="History">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HISTORY (Image left) ================= -->
+  <section class="bg-emerald-50">
+    <div class="max-w-6xl mx-auto py-10 px-6">
+      <h2 class="text-3xl font-bold text-center mb-10"></h2>
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="bg-gray-300 h-64 rounded-lg overflow-hidden order-2 md:order-1">
+          <img class="w-full h-full object-cover" src="/IMG_2461.JPG.jpeg" alt="History">
+        </div>
+        <p class="text-gray-600 leading-relaxed order-1 md:order-2">Founded in response to the devastating 1995 floods, ALO has evolved over nearly three decades into a trusted community-rooted NGO promoting sustainable livelihoods, food security, social justice, gender equality, and peacebuilding.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VISION & MISSION ================= -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+      <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-green-600">
+        <h2 class="text-3xl font-bold mb-4 text-green-900">Vision</h2>
+        <p class="text-gray-600 leading-relaxed">A peaceful, just, and inclusive society where all individuals live free from discrimination and poverty, enjoying equal rights, justice, and opportunities.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-orange-500">
+        <h2 class="text-3xl font-bold mb-4 text-orange-600">Mission</h2>
+        <p class="text-gray-600 leading-relaxed">To empower marginalized and indigenous communities through rights-based and climate-resilient development, ensuring sustainable livelihoods, gender equality, and social harmony.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STRATEGIC FOCUS ================= -->
+  <section class="py-16 bg-emerald-900 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 text-center">Strategic Focus Areas</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+          <i class="fa-solid fa-seedling text-3xl mb-4 text-orange-400"></i>
+          <h4 class="font-bold text-xl mb-2">Sustainable Livelihoods</h4>
+          <p class="text-sm opacity-80">Empowering communities through food security and sustainable development.</p>
+        </div>
+        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+          <i class="fa-solid fa-gavel text-3xl mb-4 text-orange-400"></i>
+          <h4 class="font-bold text-xl mb-2">Land Rights</h4>
+          <p class="text-sm opacity-80">Indigenous land rights & legal empowerment for justice.</p>
+        </div>
+        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+          <i class="fa-solid fa-cloud-sun text-3xl mb-4 text-orange-400"></i>
+          <h4 class="font-bold text-xl mb-2">Climate-Resilient</h4>
+          <p class="text-sm opacity-80">Climate-resilient agriculture practices for a better future.</p>
+        </div>
+        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+          <i class="fa-solid fa-person-dress text-3xl mb-4 text-orange-400"></i>
+          <h4 class="font-bold text-xl mb-2">Women Empowerment</h4>
+          <p class="text-sm opacity-80">Economic and social upliftment for women & adolescent girls.</p>
+        </div>
+        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+          <i class="fa-solid fa-handshake-simple text-3xl mb-4 text-orange-400"></i>
+          <h4 class="font-bold text-xl mb-2">Peacebuilding</h4>
+          <p class="text-sm opacity-80">Promoting social cohesion and harmony in society.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CORE POLICIES ================= -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Our Core Policies</h2>
+      <p class="text-gray-500 mb-12 max-w-2xl mx-auto">
+        We operate under rigorous standards to ensure total transparency, accountability, and the highest level of ethical conduct.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 bg-white">
+          <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-700">
+            <i class="fa-solid fa-file-invoice-dollar text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Financial Management</h3>
+          <p class="text-gray-600 text-sm">Adhering to strict financial protocols to ensure fiscal responsibility and complete transparency in all transactions.</p>
+        </div>
+        <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 bg-white">
+          <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-700">
+            <i class="fa-solid fa-user-group text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">HR Policy</h3>
+          <p class="text-gray-600 text-sm">Fostering a professional work environment that prioritizes employee development, equity, and talent management.</p>
+        </div>
+        <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 bg-white">
+          <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-700">
+            <i class="fa-solid fa-venus-mars text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Gender Policy</h3>
+          <p class="text-gray-600 text-sm">Dedicated to promoting gender sensitivity, equal opportunity, and inclusivity across all organizational operations.</p>
+        </div>
+        <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 bg-white">
+          <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-700">
+            <i class="fa-solid fa-shield-halved text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Safeguarding & PSEA</h3>
+          <p class="text-gray-600 text-sm">Maintaining a zero-tolerance approach toward exploitation, abuse, and harassment to ensure a safe environment for all.</p>
+        </div>
+        <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 bg-white">
+          <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-700">
+            <i class="fa-solid fa-child-reaching text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Child Protection</h3>
+          <p class="text-gray-600 text-sm">Committed to safeguarding children's rights and well-being through comprehensive protection protocols.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CAPACITY & GOVERNANCE ================= -->
+  <section class="py-20 bg-gradient-to-br from-emerald-800 to-green-900 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Capacity & Governance</h2>
+        <p class="text-lg text-emerald-100 max-w-2xl mx-auto">
+          ALO maintains strong governance, compliance, and accountability mechanisms.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+          <i class="fa-solid fa-users text-3xl text-orange-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">25-Member</h3>
+          <p class="text-gray-600">General Committee</p>
+        </div>
+        <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+          <i class="fa-solid fa-user-tie text-3xl text-orange-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">7-Member</h3>
+          <p class="text-gray-600">Executive Committee</p>
+        </div>
+        <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+          <i class="fa-solid fa-shield-halved text-3xl text-orange-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">No Family Relations</h3>
+          <p class="text-gray-600">Among board members</p>
+        </div>
+        <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+          <i class="fa-solid fa-circle-info text-3xl text-orange-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Advisory</h3>
+          <p class="text-gray-600">Committee support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PARTNERSHIP CTA ================= -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <div class="text-emerald-700 text-5xl mb-8">
+        <i class="fa-solid fa-handshake"></i>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Together We Can Build a Just & Equal Society
+      </h2>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-10">
+        ALO stands as a resilient, community-rooted organization dedicated to advancing inclusive development, food security, rights protection, and social harmony. 
+        We invite long-term partnerships to jointly scale impact, strengthen resilience, and promote justice for marginalized communities.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-800 transition duration-300">
+          Partner With Us
+        </a>
+        <a href="#" class="border-2 border-emerald-700 text-emerald-700 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition duration-300">
+          Contact Our Team
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+<section class=" bg-[url('/teaTree.jpeg')] bg-cover bg-center  text-white text-center ">
+<div class="bg bg-green-900/70 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">
+Together We Can Build a Just & Equal Society
+</h2>
+
+<div class="flex justify-center gap-4 flex-wrap">
+<a class="bg-orange-500 px-6 py-3 rounded">Donate Now</a>
+<a class="bg-green-600 px-6 py-3 rounded">Become Volunteer</a>
+</div>
+</div>
+</section>
+
+
+<footer class="bg-gray-900 text-white text-center py-4">
+© 2026 ALO — All Rights Reserved
+</footer>
+
+
+  <!-- ================= MOBILE MENU SCRIPT ================= -->
+  <script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

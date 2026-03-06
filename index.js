@@ -169,6 +169,13 @@ app.get('/admindelete/:id', async (req,res)=>{
 });
 
 
+
+app.get('/about', async (req,res)=>{
+    
+    res.render("user/about");
+});
+
+
 app.get('/healthz', (req, res) => {
   res.status(200).send("OK");
 });
