@@ -180,6 +180,6 @@ app.get('/healthz', (req, res) => {
   res.status(200).send("OK");
 });
 // Server Start
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server running");
 });
