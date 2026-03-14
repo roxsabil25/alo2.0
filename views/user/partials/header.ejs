@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ALO Organization</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Fontawesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+  .marquee {
+    display: flex;
+    width: max-content; /* এটি কন্টেন্ট অনুযায়ী ওয়াইড সেট করবে */
+    animation: scroll 25s linear infinite;
+  }
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .marquee:hover {
+    animation-play-state: paused;
+  }
+</style>
+
+</head>
+
+<body class="bg-gray-50">
+
+<!-- ================= TOP BAR ================= -->
+<div class="bg-green-900 text-white text-sm">
+  <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 py-2 gap-2">
+
+    <div class="flex flex-wrap gap-4 hidden   md:block">
+      <span><i class="fa-solid fa-location-dot mr-1"></i> Naogaon, Bangladesh</span>
+      <span><i class="fa-solid fa-phone mr-1"></i> +8801712987908</span>
+      <span><i class="fa-solid fa-envelope mr-1"></i> alo.bd433@gmail.com</span>
+    </div>
+
+    <div class="flex gap-3 text-lg">
+      <i class="fa-brands fa-facebook cursor-pointer"></i>
+      <i class="fa-brands fa-youtube cursor-pointer"></i>
+      <i class="fa-brands fa-instagram cursor-pointer"></i>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4">
+
+  <div class="flex justify-between items-center py-4">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <img src="/ALO_LOGO_PNG.png" class="h-10">
+      <span class="font-semibold  md:block">
+        ALO Organization
+      </span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-8 font-medium">
+      <li><a href="/" class="hover:text-green-700">Home</a></li>
+      <li><a href="/about" class="hover:text-green-700">About</a></li>
+      <li><a href="/project" class="hover:text-green-700">Projects</a></li>
+      <li><a href="#" class="hover:text-green-700">Contact</a></li>
+      <li>
+        <a href="#" class="bg-orange-500 text-white px-4 py-2 rounded">
+          Donate
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden pb-4">
+    <ul class="flex flex-col gap-4 font-medium">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/project">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a class="bg-orange-500 text-white px-4 py-2 rounded inline-block">Donate</a></li>
+    </ul>
+  </div>
+
+</div>
+</nav>

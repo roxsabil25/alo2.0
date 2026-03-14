@@ -1,88 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALO Organization</title>
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Fontawesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-  .marquee {
-    display: flex;
-    width: max-content; /* এটি কন্টেন্ট অনুযায়ী ওয়াইড সেট করবে */
-    animation: scroll 25s linear infinite;
-  }
-
-  @keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-
-  .marquee:hover {
-    animation-play-state: paused;
-  }
-</style>
-</head>
-<body class="bg-gray-50">
-
-  <!-- ================= TOP BAR ================= -->
-  <div class="bg-green-900 text-white text-sm">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 py-2 gap-2">
-      <!-- Contact info: hidden on mobile, flex on medium+ -->
-      <div class="hidden md:flex flex-wrap gap-4">
-        <span><i class="fa-solid fa-location-dot mr-1"></i> Naogaon, Bangladesh</span>
-        <span><i class="fa-solid fa-phone mr-1"></i> +8801712987908</span>
-        <span><i class="fa-solid fa-envelope mr-1"></i> alo.bd433@gmail.com</span>
-      </div>
-      <!-- Social icons (always visible) -->
-      <div class="flex gap-3 text-lg">
-        <i class="fa-brands fa-facebook cursor-pointer"></i>
-        <i class="fa-brands fa-youtube cursor-pointer"></i>
-        <i class="fa-brands fa-instagram cursor-pointer"></i>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= NAVBAR ================= -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <!-- Logo -->
-        <div class="flex items-center gap-2">
-          <img src="/ALO_LOGO_PNG.png" class="h-10" alt="ALO logo">
-          <span class="font-semibold  sm:inline">ALO Organization</span>
-        </div>
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex gap-8 font-medium items-center">
-          <li><a href="/" class="hover:text-green-700">Home</a></li>
-          <li><a href="/about" class="hover:text-green-700">About</a></li>
-          <li><a href="#" class="hover:text-green-700">Projects</a></li>
-          <li><a href="#" class="hover:text-green-700">Contact</a></li>
-          <li><a href="#" class="bg-orange-500 text-white px-4 py-2 rounded">Donate</a></li>
-        </ul>
-        <!-- Mobile Button -->
-        <button id="menuBtn" class="md:hidden text-2xl">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden md:hidden pb-4">
-        <ul class="flex flex-col gap-4 font-medium">
-          <li><a href="/" class="block py-2">Home</a></li>
-          <li><a href="/about" class="block py-2">About</a></li>
-          <li><a href="#" class="block py-2">Projects</a></li>
-          <li><a href="#" class="block py-2">Contact</a></li>
-          <li><a class="bg-orange-500 text-white px-4 py-2 rounded inline-block text-center">Donate</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+<%- include('partials/header') %>
   <!-- ================= HERO ================= -->
  <section class="relative bg-emerald-300 text-white pt-[60px] pb-[5px] md:py-36 px-6 bg-[url('/project02.JPG.jpeg')] bg-cover bg-center">
-  <div class="absolute inset-0 bg-emerald-950/80"></div> <div class="relative max-w-4xl mx-auto z-10">
+  <div class="absolute inset-0 "></div> <div class="relative max-w-4xl mx-auto z-10">
     <h1 class="text-3xl md:text-5xl font-bold mb-4">ALO – Assistance for Landless Organization</h1>
     <p class="text-lg md:text-xl font-light mb-10">Empowering the Landless Since 1996</p>
 
@@ -316,7 +235,7 @@ Recently, ALO has been officially registered with the NGO Affairs Bureau under r
 
 
 <div onclick="openLandModal()" class="cursor-pointer bg-white/10 p-6 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-all duration-300 border border-white/5 group">
-  <img src="/Land Right.jpeg" alt="" class="w-[50px]">
+  <img src="/Land Right.jpeg" alt="" class="w-[50px] rounded-full">
   <h4 class="font-bold text-xl mb-2 text-white">Land Rights</h4>
   <p class="text-sm text-white/80">Indigenous land rights & legal empowerment for justice.</p>
 </div>
@@ -1388,7 +1307,7 @@ Recently, ALO has been officially registered with the NGO Affairs Bureau under r
   <section class="py-20 bg-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <div class="text-emerald-700 text-5xl mb-8">
-        <img src="/Together We Can Build.jpeg" alt="" class="w-[100px] m-auto ">
+        <img src="/Together We Can Build.jpeg" alt="" class="w-[100px] m-auto rounded-full border-2 border-solid border-green-500 ">
       </div>
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
         Together We Can Build a Just & Equal Society
@@ -1408,33 +1327,4 @@ Recently, ALO has been officially registered with the NGO Affairs Bureau under r
     </div>
   </section>
 
-  <!-- ================= CTA ================= -->
-<section class=" bg-[url('/teaTree.jpeg')] bg-cover bg-center  text-white text-center ">
-<div class="bg bg-green-900/70 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold mb-6">
-Together We Can Build a Just & Equal Society
-</h2>
-
-<div class="flex justify-center gap-4 flex-wrap">
-<a class="bg-orange-500 px-6 py-3 rounded">Donate Now</a>
-<a class="bg-green-600 px-6 py-3 rounded">Become Volunteer</a>
-</div>
-</div>
-</section>
-
-
-<footer class="bg-gray-900 text-white text-center py-4">
-© 2026 ALO — All Rights Reserved
-</footer>
-
-
-  <!-- ================= MOBILE MENU SCRIPT ================= -->
-  <script>
-    const btn = document.getElementById("menuBtn");
-    const menu = document.getElementById("mobileMenu");
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-  </script>
-</body>
-</html>
+ <%- include('partials/footer') %>

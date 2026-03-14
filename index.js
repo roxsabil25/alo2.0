@@ -176,6 +176,11 @@ app.get('/about', async (req,res)=>{
 });
 
 
+app.get('/project', async (req,res)=>{
+    
+    res.render("user/project");
+});
+
 app.get('/healthz', (req, res) => {
   res.status(200).send("OK");
 });
