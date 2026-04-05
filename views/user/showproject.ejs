@@ -63,8 +63,10 @@
     </nav>
 
     <!-- ================= HERO ================= -->
+      <% if(projects && projects.length > 0) { %>
+            <% projects.forEach(project => { %>
 <section
-class="relative bg-[url('/IMG_2632.JPG.jpeg')] bg-cover bg-center h-[55vh] flex items-center">
+class="relative bg-[url('/uploads/<%= project.coverimage %>')] bg-cover bg-center h-[55vh] flex items-center">
 
 <div class="absolute inset-0 bg-black/60"></div>
 
@@ -93,8 +95,7 @@ class="relative bg-[url('/IMG_2632.JPG.jpeg')] bg-cover bg-center h-[55vh] flex 
             <div class="w-24 h-1.5 bg-green-600 mx-auto mt-4 rounded-full"></div>
         </div>
 
-        <% if(projects && projects.length > 0) { %>
-            <% projects.forEach(project => { %>
+       
                 
                 <div class="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100 mb-16 transition-all hover:shadow-2xl">
                     
@@ -219,51 +220,3 @@ class="relative bg-[url('/IMG_2632.JPG.jpeg')] bg-cover bg-center h-[55vh] flex 
 
 </body>
 </html>
-
-
-
-ALO Technology Hub
-Climate Adaptive Agriculture Technology Hub
-Empowering farmers with innovative and climate-resilient agricultural solutions.
-
-About the ALO Technology Hub
-ALO Climate Adaptive Agriculture Technology Hub is an innovative center dedicated to climate-resilient agricultural hub practices. Located in Naogaon, Bangladesh, it empowers farmers with hands-on demonstrations of sustainable farming technologies to combat climate change.
-✔ Climate-Smart Practices
-✔ Hands-On Demonstrations
-✔ Sustainable Development
-✔ Indigenous Knowledge Goals (UBs)
-Key Features of the Hub
-Solar Water Pumps
-Solar irrigation for efficient water management
-Vertical Hydroponics
-Space-saving soilless farming method
-Vermicomposting Units
-Organic waste to produce nutrient-rich compost
-Organic Seed Banks
-Indigenous, climate-resilient seed preservation
-
-
-Our Facilities
-Hands-On Training
-Our hub offers comprehensive facilities to support sustainable agriculture initiatives.
-Demonstration Plots
-Farmers receive hands-on training, demonstrations, and access to innovative agricultural technologies.
-Research & Innovation
-Workshops & Training
-Climate-Smart Farming
-Learn about sustainable and climate-resilient farming practices.
-Mushroom Cultivation
-Participate in workshops on high-value mushroom farming.
-Vermicompost Production
-Training on producing nutrient-rich organic compost.
-Youth Entrepreneurs
-Empowering youth with solutions and agricultural entrepreneurship skills.
-Innovation Impact
-1500+
-Farmers & Youth
-300+
-Solar & Climate Support
-22+
-Improved Farming Practices
-18
-Research & Demonstration Projects

@@ -1,12 +1,12 @@
 <%- include('partials/header') %>
   <!-- ================= HERO ================= -->
- <section class="relative bg-emerald-300 text-white pt-[60px] pb-[5px] md:py-36 px-6 bg-[url('/project02.JPG.jpeg')] bg-cover bg-center">
-  <div class="absolute inset-0 "></div> <div class="relative max-w-4xl mx-auto z-10">
-    <h1 class="text-3xl md:text-5xl font-bold mb-4">ALO – Assistance for Landless Organization</h1>
-    <p class="text-lg md:text-xl font-light mb-10">Empowering the Landless Since 1996</p>
+<section class="relative bg-emerald-300 text-white min-h-[400px]  pt-[60px] pb-[40px] md:py-36 px-6 bg-[url('/project02.JPG.jpeg')] bg-cover bg-center md:pt-[350px]">
+  
+  <div class="absolute inset-0 bg-black/20"></div> 
 
-    
-  </div>
+  <div class="relative max-w-4xl mx-auto z-10">
+    </div>
+
 </section>
 
 <section class="overflow-hidden bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 ">
@@ -32,11 +32,11 @@
   <section class="max-w-6xl mx-auto py-16 px-6">
     <h2 class="text-3xl font-bold text-center mb-10">Brief History of Our Development Journey</h2>
     <div class="grid md:grid-cols-2 gap-10 items-center">
-      <p class="text-gray-600 leading-relaxed">ALO – Assistance for the Landless Organization is a non-profit organization dedicated to empowering the most disadvantaged and marginalized communities, with a special focus on indigenous and ultra-poor populations. The organization was founded in response to the devastating floods of 1995 in the Naogaon district of Bangladesh, with a mission to enhance food security and promote sustainable income generation for affected communities.
+      <p class="text-gray-600 leading-relaxed text-justify">ALO – Assistance for the Landless Organization is a non-profit organization dedicated to empowering the most disadvantaged and marginalized communities, with a special focus on indigenous and ultra-poor populations. The organization was founded in response to the devastating floods of 1995 in the Naogaon district of Bangladesh, with a mission to enhance food security and promote sustainable income generation for affected communities.
 The initiative formally began on March 20, 1996, when a group of young, committed activists held a general meeting and resolved to establish an organization dedicated to ensuring equal rights for all and fostering long-term development. Their vision was to build a peaceful society free from hunger and poverty. To formalize its operations, ALO was officially registered on March 25, 1999, under the Social Services Department of the Government of the People's Republic of Bangladesh.
 In its continuous journey,</p>
-      <div class="bg-gray-300 h-64 rounded-lg overflow-hidden">
-        <img class="w-full h-full object-cover" src="/WhatsApp Image 2026-03-03 at 12.10.36 AM.jpeg" alt="History">
+      <div class="bg-gray-300 h-74 rounded-lg overflow-hidden">
+        <img class="w-full h-full object-cover" src="/20170820_17373.jpeg" alt="History">
       </div>
     </div>
   </section>
@@ -46,10 +46,10 @@ In its continuous journey,</p>
     <div class="max-w-6xl mx-auto py-10 px-6">
       <h2 class="text-3xl font-bold text-center mb-10"></h2>
       <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div class="bg-gray-300 h-64 rounded-lg overflow-hidden order-2 md:order-1">
-          <img class="w-full h-full object-cover" src="/IMG_2461.JPG.jpeg" alt="History">
+        <div class="bg-gray-300 h-64 rounded-lg overflow-hidden order-2 md:order-1 ">
+          <img class="w-full h-full object-cover" src="/IMG_2632.jpeg" alt="History">
         </div>
-        <p class="text-gray-600 leading-relaxed order-1 md:order-2">ALO has focused on implementing programs that promote the Right to Livelihood and the Right to Health for vulnerable and marginalized populations, particularly indigenous and economically disadvantaged communities. Guided by a dedicated team of young volunteers, the organization has:
+        <p class="text-gray-600 leading-relaxed order-1 md:order-2 text-justify">ALO has focused on implementing programs that promote the Right to Livelihood and the Right to Health for vulnerable and marginalized populations, particularly indigenous and economically disadvantaged communities. Guided by a dedicated team of young volunteers, the organization has:
 •	Collaborated with public and private legal aid institutions to provide free legal assistance and prevent human rights violations.
 •	Promoted social justice, sustainable livelihoods, education, and health awareness in -erserved communities.
 Recently, ALO has been officially registered with the NGO Affairs Bureau under registration number NGOAB 3579, marking a significant milestone in its mission to expand its impact across marginalized populations in Bangladesh.</p>
@@ -77,7 +77,8 @@ Recently, ALO has been officially registered with the NGO Affairs Bureau under r
 <%- include('partials/focusAreas') %>
 
   <!-- ================= CORE POLICIES ================= -->
-  <section class="py-16 bg-[#f97316] text-white">
+  <section class="relative py-16 bg-emerald-700  text-white">
+    
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-4">Our Core Policies</h2>
       <p class="text-white-500 mb-12 max-w-2xl mx-auto">
@@ -87,7 +88,7 @@ Recently, ALO has been officially registered with the NGO Affairs Bureau under r
 
 <div onclick="openFinancialModal()" class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 bg-white cursor-pointer group">
   <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-700 group-hover:scale-110 transition-transform">
-    <img src="/Fnancial managmen.png" alt="Finance Icon" class="w-8">
+    <img src="/Fnancial managmen.png" alt="Finance Icon" class="w-14">
   </div>
   <h3 class="text-xl font-bold mb-3 text-center text-gray-800">Financial Management</h3>
   <p class="text-gray-600 text-sm text-center">Adhering to strict financial protocols to ensure fiscal responsibility and complete transparency in all transactions.</p>
@@ -277,7 +278,7 @@ window.onclick = function(event) {
 
 <div onclick="openHRModal()" class="cursor-pointer p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 bg-white group text-center">
   <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-700 group-hover:bg-green-600 group-hover:text-white transition-all">
-    <img src="/HR-Policy icon.avif" alt="">
+    <img src="/HR-Policy icon.avif" alt="" class="w-14">
   </div>
   <h3 class="text-xl font-bold mb-3 text-gray-800">HR Policy</h3>
   <p class="text-gray-600 text-sm leading-relaxed">Fostering a professional work environment that prioritizes employee development, equity, and talent management.</p>
@@ -428,7 +429,7 @@ window.onclick = function(event) {
 
         <div onclick="openGenderModal()" class="cursor-pointer p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 bg-white text-center">
   <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-700">
-    <img src="/Women Empowerme.png" alt="">
+    <img src="/Women Empowerme.png" alt="" class="w-14">
   </div>
   <h3 class="text-xl font-bold mb-3 text-gray-800">Gender Policy</h3>
   <p class="text-gray-600 text-sm">Dedicated to promoting gender sensitivity, equal opportunity, and inclusivity across all organizational operations.</p>
@@ -533,7 +534,7 @@ window.onclick = function(event) {
 
 <div onclick="openSafeguardingModal()" class="cursor-pointer p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 bg-white group text-center">
   <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-all">
-    <img src="/Safeguarding.jpeg" alt="" >
+    <img src="/Safeguarding.jpeg" alt="" class="w-14">
   </div>
   <h3 class="text-xl font-bold mb-3 text-gray-800">Safeguarding & PSEA</h3>
   <p class="text-gray-600 text-sm">Maintaining a zero-tolerance approach toward exploitation, abuse, and harassment to ensure a safe environment for all.</p>
@@ -659,7 +660,7 @@ window.onclick = function(event) {
 
 <div onclick="openChildModal()" class="cursor-pointer p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all duration-300 bg-white group text-center">
   <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6 text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-all">
-    <img src="/Child-prote.jpeg" alt="">
+    <img src="/Child-prote.jpeg" alt="" class="w-14">
   </div>
   <h3 class="text-xl font-bold mb-3 text-gray-800">Child Protection</h3>
   <p class="text-gray-600 text-sm leading-relaxed">Committed to safeguarding children's rights and well-being through comprehensive protection protocols.</p>
@@ -846,7 +847,7 @@ window.onclick = function(event) {
   <section class="py-20 bg-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <div class="text-emerald-700 text-5xl mb-8">
-        <img src="/Together We Can Build.jpeg" alt="" class="w-[100px] m-auto rounded-full border-2 border-solid border-green-500 ">
+        <!-- <img src="/Together We Can Build.jpeg" alt="" class="w-[100px] m-auto rounded-full border-2 border-solid border-green-500 "> -->
       </div>
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
         Together We Can Build a Just & Equal Society

@@ -27,7 +27,7 @@
 
             <div onclick="openProject('vermiCompost')" class="group cursor-pointer bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-stone-200">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="/WhatsApp Image 2026-03-02 at 11.34.06 PM.jpeg" alt="Vermi Compost" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <img src="/virmi.jpeg" alt="Vermi Compost" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     <div class="absolute inset-0 bg-blue-900/40 group-hover:bg-blue-900/20 transition-colors"></div>
                     <div class="absolute bottom-4 left-6">
                         <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Organic Fertilizer</span>
@@ -83,7 +83,7 @@
     <div id="detail-view" class="hidden animate-fade-in">
         <div class="bg-white border-b sticky top-0 z-10 px-6 py-4">
             <button onclick="closeProject()" class="text-emerald-700 font-bold flex items-center gap-2 hover:bg-emerald-50 px-4 py-2 rounded-lg transition">
-                ← Back to Gallery
+                ← Back
             </button>
         </div>
 
@@ -95,25 +95,31 @@
         // Data for Projects (Reflecting your images)
         const projectData = {
             'Livelihoods': `
-                    <main class="max-w-6xl mx-auto px-6 -mt-10">
+                    <main class=" mx-auto px-6 -mt-10">
 
-                        <section class="relative bg-[url('/0.jpeg')] bg-cover bg-center h-[65vh] flex items-center justify-center md:justify-start">
+                       <section class="relative bg-[url('/0.jpeg')] bg-cover bg-center h-[64vh] flex items-start justify-end pt-12 md:pt-20 px-6 md:px-16 ">
 
   <div class="absolute inset-0 bg-black/60"></div>
 
-  <div class="relative w-full max-w-7xl mx-auto px-4 text-white  md:text-left">
+  <div class="relative z-10 w-full max-w-4xl text-right flex flex-col items-end animate-in fade-in slide-in-from-right-5 duration-700">
     
-    <h1 class="text-3xl md:text-5xl font-bold mb-4">
-      Rural Livelihoods &  <br class="hidden md:block"> Food Security Project
+    <h1 class="text-3xl md:text-4xl font-extrabold mb-4 leading-tight tracking-tight text-white">
+      Rural Livelihoods &  Food Security Project
     </h1>
 
-    <p class="max-w-xl mb-6 mx-auto md:mx-0 text-base md:text-lg">
-      ALO is a rights-based development organization committed to empowering marginalized and indigenous communities to create a peaceful and inclusive society—free from discrimination and poverty—where everyone enjoys equal access to justice and opportunities. 
+    <p class="max-w-[700px] mb-6 text-base md:text-lg text-white/90 leading-relaxed">
+      Project Title: Agricultural development, IGAs, youth vocational opportunities, and wash education.
+Improved food & nutrition security through capacity building and alternative livelihood options
+
     </p>
 
-    <div class="flex gap-4 justify-center md:justify-start">
-      <a class="bg-green-700 px-6 py-3 rounded cursor-pointer hover:bg-green-800 transition">Our Projects</a>
-      <a class="bg-orange-500 px-6 py-3 rounded cursor-pointer hover:bg-orange-600 transition">Donate Now</a>
+    <div class="flex gap-4 justify-end w-full">
+      <a class="bg-green-700 px-7 py-3 rounded-full font-bold cursor-pointer hover:bg-green-800 transition-all shadow-lg active:scale-95">
+        Our Projects
+      </a>
+      <a class="bg-orange-500 px-7 py-3 rounded-full font-bold cursor-pointer hover:bg-orange-600 transition-all shadow-lg active:scale-95">
+        Donate Now
+      </a>
     </div>
     
   </div>
@@ -127,11 +133,11 @@
                 <div class="md:w-3/5">
                     <h2 class="text-2xl font-bold text-emerald-800 mb-4 border-b-2 border-emerald-100 pb-2 inline-block">Our Development Initiatives</h2>
                     <p class="text-gray-600 leading-relaxed text-sm">
-                        ALO implements integrated development projects focusing on food security, climate resilience, livelihoods, gender equality, and legal empowerment. Our projects are designed to improve the quality of life for marginalized communities.
+                        ALO – Assistance for Landless Organization implements integrated development projects to improve the livelihoods, food security, and social justice of marginalized communities in rural Bangladesh. Our initiatives focus on improving food & nutrition security through capacity building and alternative livelihood practices. 
                     </p>
                 </div>
                 <div class="md:w-2/5">
-                    <img src="/P-4.jpeg" alt="Farming" class="rounded-2xl shadow-lg border-4 border-white">
+                    <img src="/P-1.jpeg" alt="Farming" class="rounded-2xl shadow-lg border-4 border-white">
                 </div>
             </div>
         </section>
@@ -149,82 +155,227 @@
             </div>
         </section>
 
-        <section class="mb-16">
-            <h2 class="text-center text-2xl font-bold text-emerald-900 mb-8">Key Project Activities</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-0 rounded-3xl overflow-hidden shadow-2xl border border-emerald-100">
-                
-                <div class="bg-emerald-800 p-6 text-white hover:bg-emerald-700 transition">
-                    <h4 class="font-bold border-b border-emerald-400 pb-2 mb-4">Sustainable Livelihoods</h4>
-                    <ul class="text-xs space-y-3 opacity-90">
-                        <li>• Sustainable livelihood models</li>
-                        <li>• Vermicomposting production</li>
-                        <li>• Mushroom cultivation</li>
-                    </ul>
-                </div>
+      
 
-                <div class="bg-orange-600 p-6 text-white hover:bg-orange-500 transition">
-                    <h4 class="font-bold border-b border-orange-400 pb-2 mb-4">Women & Nutrition</h4>
-                    <ul class="text-xs space-y-3 opacity-90">
-                        <li>• Native gardening training</li>
-                        <li>• Savings groups formation</li>
-                        <li>• Nutrition education</li>
-                    </ul>
-                </div>
+        <section class="bg-[#EEF5EE] py-16 px-4 font-sans">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="mb-12 border-l-8 border-[#F57C00] pl-6">
+      <h2 class="text-3xl font-extrabold text-[#1B5E20] uppercase tracking-tight">Our Key Interventions</h2>
+      <p class="text-gray-600 mt-2 italic">Strategic activities driving sustainable change (2025-2029)</p>
+    </div>
 
-                <div class="bg-emerald-700 p-6 text-white hover:bg-emerald-600 transition">
-                    <h4 class="font-bold border-b border-emerald-400 pb-2 mb-4">Youth Employment</h4>
-                    <ul class="text-xs space-y-3 opacity-90">
-                        <li>• Skill-based ICT training</li>
-                        <li>• Market linkage support</li>
-                        <li>• Financial access</li>
-                    </ul>
-                </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+        <div class="bg-[#1B5E20] p-4 text-white flex items-center gap-3">
+          <span class="text-2xl">🌱</span>
+          <h3 class="font-bold leading-tight">Climate-Adaptive Agriculture</h3>
+        </div>
+        <div class="p-5 flex-grow">
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Distribution of seeds & fruit tree saplings</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Model kitchen garden & community seed banks</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span><strong>Smart Tech:</strong> Drip irrigation, Sac/bag cultivation & Vermin compost</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Climate-change adaptive nursery & Tech Hubs</span>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-                <div class="bg-stone-700 p-6 text-white hover:bg-stone-600 transition">
-                    <h4 class="font-bold border-b border-stone-400 pb-2 mb-4">Legal Aid & Rights</h4>
-                    <ul class="text-xs space-y-3 opacity-90">
-                        <li>• Legal awareness sessions</li>
-                        <li>• Land rights advocacy</li>
-                        <li>• Mediation support</li>
-                    </ul>
-                </div>
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+        <div class="bg-[#1B5E20] p-4 text-white flex items-center gap-3">
+          <span class="text-2xl">🚀</span>
+          <h3 class="font-bold leading-tight">Women & Youth Empowerment</h3>
+        </div>
+        <div class="p-5 flex-grow">
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Motivational workshops with TVET participants</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Agricultural & non-agricultural based IGAs</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Linking with financial & Gov service providers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Skill training on adaptive technology</span>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-            </div>
-        </section>
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+        <div class="bg-[#1B5E20] p-4 text-white flex items-center gap-3">
+          <span class="text-2xl">🤝</span>
+          <h3 class="font-bold leading-tight">Peacebuilding & Awareness</h3>
+        </div>
+        <div class="p-5 flex-grow">
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Family relationship training for peace</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Gender awareness group training</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Meeting with Pargana Parishad</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Distribution of peace posters & billboarding</span>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-        <section class="bg-white rounded-3xl p-10 shadow-sm border border-emerald-50 mb-16">
-            <h2 class="text-center font-bold text-emerald-900 mb-10">Our Impact</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="border-r border-gray-100 last:border-0">
-                    <p class="text-4xl font-extrabold text-emerald-600">720+</p>
-                    <p class="text-xs text-gray-500 mt-2 font-semibold">Households Supported</p>
-                </div>
-                <div class="border-r border-gray-100 last:border-0">
-                    <p class="text-4xl font-extrabold text-emerald-600">177</p>
-                    <p class="text-xs text-gray-500 mt-2 font-semibold">Youth Trained</p>
-                </div>
-                <div class="border-r border-gray-100 last:border-0">
-                    <p class="text-4xl font-extrabold text-emerald-600">3,777</p>
-                    <p class="text-xs text-gray-500 mt-2 font-semibold">People Reached</p>
-                </div>
-                <div>
-                    <p class="text-4xl font-extrabold text-emerald-600">200+</p>
-                    <p class="text-xs text-gray-500 mt-2 font-semibold">Volunteers Mobilized</p>
-                </div>
-            </div>
-        </section>
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+        <div class="bg-[#1B5E20] p-4 text-white flex items-center gap-3">
+          <span class="text-2xl">💧</span>
+          <h3 class="font-bold leading-tight">WASH & Nutrition Care</h3>
+        </div>
+        <div class="p-5 flex-grow">
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>HNC training for women & female youths</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Nutrition supplement for GAM children</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>WASH sessions with targeted participants</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#F57C00] font-bold">•</span>
+              <span>Vocational training for community youth</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="inline-block bg-[#F57C00] text-white px-6 py-2 rounded-full font-semibold shadow-lg">
+        Building Resilient Communities in Bangladesh
+      </p>
+    </div>
+  </div>
+</section>
+
+        <section class="bg-[#EEF5EE] py-16 px-4 font-sans">
+  <div class="max-w-6xl mx-auto">
+    
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1B5E20] mb-4">Project Overview & Outcomes</h2>
+      <div class="w-24 h-1 bg-[#F57C00] mx-auto mb-6"></div>
+      <p class="text-gray-700 max-w-2xl mx-auto">
+        Funded by <span class="font-bold">Mennonite Central Committee (MCC Bangladesh)</span>, this initiative (2025 – 2029) aims to transform lives through sustainable development.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-[#F57C00] text-center transform transition hover:scale-105">
+        <div class="text-4xl font-black text-[#1B5E20] mb-2">720</div>
+        <div class="text-sm uppercase tracking-wider font-semibold text-gray-600">Households Supported</div>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-[#F57C00] text-center transform transition hover:scale-105">
+        <div class="text-4xl font-black text-[#1B5E20] mb-2">177</div>
+        <div class="text-sm uppercase tracking-wider font-semibold text-gray-600">Youth Trained</div>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm border-b-4 border-[#F57C00] text-center transform transition hover:scale-105">
+        <div class="text-4xl font-black text-[#1B5E20] mb-2">3,977</div>
+        <div class="text-sm uppercase tracking-wider font-semibold text-gray-600">People Reached</div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <div class="bg-white p-6 rounded-xl shadow-sm flex items-start space-x-4 border-l-4 border-[#1B5E20]">
+        <div class="bg-[#1B5E20] text-white rounded-full p-3 h-10 w-10 flex items-center justify-center flex-shrink-0 font-bold">1</div>
+        <div>
+          <h4 class="font-bold text-[#1B5E20] mb-1 text-lg">Food Security & Nutrition</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">Increased and diversified food consumption (especially for women & children) by ensuring climate-adaptive homestead agriculture.</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm flex items-start space-x-4 border-l-4 border-[#1B5E20]">
+        <div class="bg-[#1B5E20] text-white rounded-full p-3 h-10 w-10 flex items-center justify-center flex-shrink-0 font-bold">2</div>
+        <div>
+          <h4 class="font-bold text-[#1B5E20] mb-1 text-lg">Youth Empowerment</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">Increased non-agricultural livelihood options for the youths of targeted communities to ensure economic stability.</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm flex items-start space-x-4 border-l-4 border-[#1B5E20]">
+        <div class="bg-[#1B5E20] text-white rounded-full p-3 h-10 w-10 flex items-center justify-center flex-shrink-0 font-bold">3</div>
+        <div>
+          <h4 class="font-bold text-[#1B5E20] mb-1 text-lg">Women's Economic Growth</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">Increased income and savings for women through engagement in diversified livelihood options.</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm flex items-start space-x-4 border-l-4 border-[#1B5E20]">
+        <div class="bg-[#1B5E20] text-white rounded-full p-3 h-10 w-10 flex items-center justify-center flex-shrink-0 font-bold">4</div>
+        <div>
+          <h4 class="font-bold text-[#1B5E20] mb-1 text-lg">WASH & Peacebuilding</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">Enhancing knowledge on Water, Sanitation, and Hygiene (WASH) alongside fostering community Peacebuilding.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-12 bg-[#1B5E20] rounded-2xl p-6 text-white flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center space-x-2">
+        <span class="opacity-80">Budget:</span>
+        <span class="font-mono font-bold text-[#F57C00] text-xl">BDT 22,538,000</span>
+      </div>
+      <div class="h-px w-full md:w-px md:h-8 bg-white/20"></div>
+      <div class="flex items-center space-x-2">
+        <span class="opacity-80">Duration:</span>
+        <span class="font-bold">2025 – 2029</span>
+      </div>
+      <div class="h-px w-full md:w-px md:h-8 bg-white/20"></div>
+      <a href="https://www.mcc.org" target="_blank" class="text-white hover:text-[#F57C00] underline transition-colors">www.mcc.org</a>
+    </div>
+
+  </div>
+</section>
+
 
         <section class="mb-20">
             <h2 class="text-center font-bold text-emerald-900 mb-8 underline decoration-emerald-200 underline-offset-8">Project Gallery</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="group relative overflow-hidden rounded-2xl h-48 shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
+                    <img src="/Our Development initea - Copy.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
-                <div class="group relative overflow-hidden rounded-2xl h-48 shadow-lg">
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
                     <img src="/WhatsApp Image 2026-03-03 at 12.10.34 AM.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
-                <div class="group relative overflow-hidden rounded-2xl h-48 shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
+                    <img src="/P-1.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 </div>
             </div>
         </section>
@@ -248,28 +399,42 @@
     .bg-paper { background-color: #f4f1ea; } /* ইমেজের মতো হালকা অফ-হোয়াইট টেক্সচার */
 </style>
 
-<div class="bg-paper min-h-screen text-stone-800 pb-20">
+<div class="bg-paper h-full text-stone-800 pb-40">
 
-    <section class="relative h-[450px] md:h-[550px] flex items-center justify-center text-white text-center px-4 overflow-hidden">
-        <div class="absolute inset-0 bg-[url('/images.jpeg')] bg-cover bg-center">
-            <div class="absolute inset-0 bg-black/40"></div> </div>
+    <section class="relative w-full h-[70vh] md:h-[600px] flex items-start justify-center md:justify-end pt-12 md:pt-24 px-6 md:px-20 overflow-hidden ">
+    
+    <div class="absolute inset-0 z-0">
+        <div class="w-full h-full bg-[url('/0hgf.jpeg')] bg-cover bg-center md:bg-fixed"></div>
+        <div class="absolute inset-0 bg-black/40 md:bg-black/30"></div> 
+    </div>
+
+    <div class="relative z-10 max-w-2xl text-center md:text-right flex flex-col items-center md:items-end animate-in fade-in slide-in-from-right-5 duration-1000">
         
-        <div class="relative z-10 max-w-4xl">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-2 uppercase tracking-tight">ALO Vermi Compost</h1>
-            <h2 class="text-2xl md:text-4xl font-semibold mb-6 text-green-400">Organic Fertilizer</h2>
-            
-            <div class="flex flex-wrap justify-center gap-4 text-sm md:text-lg font-medium mb-8">
-                <span class="flex items-center gap-1">✔ Increases crop production</span>
-                <span class="flex items-center gap-1">✔ Eco-friendly nutrient freefriendly source</span>
-            </div>
-            
-            <button class="bg-orange-600 hover:bg-orange-700 text-white px-10 py-3 rounded-full font-bold text-lg shadow-lg transition-all">
-                Learn More
-            </button>
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-2 uppercase tracking-tighter text-white drop-shadow-xl">
+            ALO Vermi Compost
+        </h1>
+        
+        <h2 class="text-xl md:text-4xl font-bold mb-6 text-green-400 drop-shadow-md">
+            Organic Fertilizer
+        </h2>
+        
+        <div class="flex flex-col md:flex-row flex-wrap justify-center md:justify-end gap-3 md:gap-6 text-sm md:text-lg font-semibold mb-8 text-white/90">
+            <span class="flex items-center gap-2 bg-black/20 md:bg-transparent px-3 py-1 rounded-full">
+                <span class="text-green-400 text-[40px]">✔</span> Increases crop production
+            </span>
+            <span class="flex items-center gap-2 bg-black/20 md:bg-transparent px-3 py-1 rounded-full">
+                <span class="text-green-400 text-[40px]">✔</span> Eco-friendly nutrient source
+            </span>
         </div>
-    </section>
+        
+        <button class="bg-orange-600 hover:bg-orange-700 text-white px-10 py-3.5 rounded-full font-bold text-lg shadow-2xl transition-all active:scale-95 border-b-4 border-orange-800">
+            Learn More
+        </button>
+        
+    </div>
+</section>
 
-    <section class="max-w-6xl mx-auto py-16 px-6">
+    <section class="max-w-6xl mx-auto py-16 px-6 bg-[#EEF5EE]">
         <div class="grid md:grid-cols-2 gap-10 items-center">
             <div>
                 <h3 class="text-2xl md:text-3xl font-bold mb-6 text-stone-900 leading-tight">
@@ -287,28 +452,28 @@
             </div>
             <div class="relative group">
                 <div class="absolute -inset-1 bg-green-200 rounded-2xl blur opacity-25 group-hover:opacity-50 transition"></div>
-                <img src="/download.jpeg" 
+                <img src="/2.jpg.jpeg" 
                      class="relative rounded-2xl shadow-xl w-full h-80 object-cover" alt="Fertilizer">
             </div>
         </div>
     </section>
 
-    <section class="bg-stone-100 py-16 border-y border-stone-200">
+    <section class="bg-[#EEF5EE] py-16 border-y border-stone-200">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12 text-green-900">Unique Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-200">
-                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">🪱</div>
+                    <div class="w-20 h-20  rounded-full flex items-center justify-center mx-auto mb-6 text-3xl"><img src="/Cape.PNG" alt="" class="w-[70px]"></div>
                     <h4 class="font-bold text-xl mb-3">Live Earthworms</h4>
                     <p class="text-stone-600">Uses red wiggler earthworms to boost composting</p>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-200">
-                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">🌱</div>
+                    <div class="w-20 h-20  rounded-full flex items-center justify-center mx-auto mb-6 text-3xl"><img src="/8649230.png" alt="" class="w-[60px]"></div>
                     <h4 class="font-bold text-xl mb-3">Pitful Process</h4>
                     <p class="text-stone-600">Bio-cure technology developed through improved process</p>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-200">
-                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">🥦</div>
+                    <div class="w-20 h-20  rounded-full flex items-center justify-center mx-auto mb-6 text-3xl"><img src="/6689800.png" alt="" class="w-[60px]"></div>
                     <h4 class="font-bold text-xl mb-3">Organic Waste Selection</h4>
                     <p class="text-stone-600">Made from fresh vegetable scraps, cow dung & plant matter</p>
                 </div>
@@ -316,7 +481,7 @@
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto py-20 px-6">
+    <section class="max-w-6xl mx-auto py-20 px-6 bg-[#EEF5EE]">
         <h2 class="text-3xl font-bold text-center mb-12">Agricultural Applications</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-md border border-stone-100">
@@ -343,18 +508,36 @@
         </div>
     </section>
 
+                <section class="mb-20">
+            <h2 class="text-center font-bold text-emerald-900 mb-8 underline decoration-emerald-200 underline-offset-8">Project Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
+                    <img src="/virmi.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
+                    <img src="/3.jpg.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
+                    <img src="/2.jpg.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+            </div>
+        </section>
+
     <section class="max-w-4xl mx-auto text-center px-6">
-        <div class="bg-green-800 rounded-[40px] py-12 px-6 text-white shadow-2xl relative overflow-hidden">
+        <div class=" rounded-[40px] py-12 px-6 text-white shadow-2xl relative overflow-hidden">
             <div class="relative z-10">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6 italic">Revitalize soil fertility with vermi compost!</h2>
-                <a href="tel:01718-213243" class="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-full font-bold text-xl inline-block mb-4 transition-all shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 italic text-[#1B5E20]">Revitalize soil fertility with vermi compost!</h2>
+                <a href="tel:01718-213243" class="bg-[#F57C00] hover:bg-orange-700 text-white px-10 py-4 rounded-full font-bold text-xl inline-block mb-4 transition-all shadow-lg">
                     Contact Us: 01718-213243
                 </a>
-                <p class="text-green-200">Revitalize soil fertility with vermi compost!</p>
+                <p class="text-green-800">Revitalize soil fertility with vermi compost!</p>
             </div>
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-green-700 rounded-full opacity-50"></div>
+            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-[#1B5E20] rounded-full opacity-50"></div>
         </div>
     </section>
+
+
+
 
 </div>
 
@@ -374,14 +557,12 @@
 <div class="bg-grass text-stone-900">
 
     <section class="relative h-[650px] flex items-center justify-center text-center text-white px-6">
-        <div class="absolute inset-0 bg-[url('/IMG_2747.JPG.jpeg')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-[url('/11.jpeg')] bg-cover bg-center">
             <div class="absolute inset-0 bg-emerald-950/60"></div> </div>
         
         <div class="relative z-10 max-w-5xl">
             <div class="flex justify-center mb-6">
-                <div class="bg-white p-3 rounded-xl shadow-lg">
-                    <span class="text-emerald-700 font-bold text-2xl">ALO</span>
-                </div>
+                
             </div>
             <h1 class="text-4xl md:text-7xl font-extrabold mb-4 tracking-tight uppercase">ALO Technology Hub</h1>
             <h2 class="text-2xl md:text-4xl font-medium mb-8 text-emerald-300">Climate Adaptive Agriculture Technology Hub</h2>
@@ -402,7 +583,7 @@
             <p class="text-stone-600 leading-relaxed mb-8 text-lg">
                 ALO Climate Adaptive Agriculture Technology Hub is an innovative center dedicated to climate-resilient agricultural hub practices. Located in **Naogaon, Bangladesh**, it empowers farmers with hands-on demonstrations of sustainable farming technologies to combat climate change.
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[20px]">
                 <div class="flex items-center gap-3 font-semibold text-emerald-800 bg-white p-3 rounded-lg shadow-sm border-l-4 border-emerald-500">
                     <span>✔</span> Climate-Smart Practices
                 </div>
@@ -419,68 +600,244 @@
         </div>
         <div class="order-1 md:order-2">
             <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-[12px] border-white">
-                <img src="/2nd phot.jpeg" alt="Farmers Training" class="w-full h-[400px] object-cover">
+                <img src="/WhatsApp Image 2026-04-04 at 12.48.57 PM.jpeg">
             </div>
         </div>
     </section>
 
-    <section class="bg-emerald-900 py-24 text-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl md:text-5xl font-bold text-center mb-20 tracking-tight">Key Features of the Hub</h2>
     
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-      
-      <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-default group">
-        <div class="text-5xl mb-6 group-hover:scale-110 transition duration-300">☀️</div>
-        <h4 class="font-bold text-xl mb-3 text-emerald-300">Solar Water Pumps</h4>
-        <p class="text-stone-300 text-sm">Solar irrigation for efficient and eco-friendly water management.</p>
-      </div>
 
-      <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-default group">
-        <div class="text-5xl mb-6 group-hover:scale-110 transition duration-300">💧</div>
-        <h4 class="font-bold text-xl mb-3 text-emerald-300">Vertical Hydroponics</h4>
-        <p class="text-stone-300 text-sm">Space-saving soilless farming methods for maximum productivity.</p>
-      </div>
 
-      <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-default group">
-        <div class="text-5xl mb-6 group-hover:scale-110 transition duration-300">🪱</div>
-        <h4 class="font-bold text-xl mb-3 text-emerald-300">Vermicomposting</h4>
-        <p class="text-stone-300 text-sm">Organic waste conversion into nutrient-rich compost for soil health.</p>
-      </div>
+<section class="py-20 px-4 md:px-8 bg-[#EEF5EE]/50">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center mb-16 relative">
+            <span class="text-sm font-bold text-[#F57C00] uppercase tracking-[0.2em] mb-3 block">Our Innovations</span>
+            <h2 class="text-4xl md:text-5xl font-black text-[#1B5E20] mb-6 leading-tight">
+                Key Features of the Hub
+            </h2>
+            <div class="w-24 h-1.5 bg-[#F57C00] mx-auto rounded-full mb-8"></div>
+            <p class="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">
+                Explore our modern agricultural technologies and sustainable farming practices designed for high yield and eco-friendliness.
+            </p>
+        </div>
 
-      <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-default group">
-        <div class="text-5xl mb-6 group-hover:scale-110 transition duration-300">🌱</div>
-        <h4 class="font-bold text-xl mb-3 text-emerald-300">Organic Seed Banks</h4>
-        <p class="text-stone-300 text-sm">Preserving indigenous, climate-resilient seeds for future generations.</p>
-      </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 
-      <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-default group">
-        <div class="text-5xl mb-6 group-hover:scale-110 transition duration-300">🌧️</div>
-        <h4 class="font-bold text-xl mb-3 text-emerald-300">Rainwater Harvesting</h4>
-        <p class="text-stone-300 text-sm">Collecting and storing rainwater to ensure sustainable water supply.</p>
-      </div>
-
-      <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-default group">
-        <div class="text-5xl mb-6 group-hover:scale-110 transition duration-300">🔋</div>
-        <h4 class="font-bold text-xl mb-3 text-emerald-300">Renewable Energy</h4>
-        <p class="text-stone-300 text-sm">Empowering communities with clean and reliable solar energy solutions.</p>
-      </div>
-
-      <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-default group">
-        <div class="text-5xl mb-6 group-hover:scale-110 transition duration-300">💻</div>
-        <h4 class="font-bold text-xl mb-3 text-emerald-300">Digital Training Hub</h4>
-        <p class="text-stone-300 text-sm">Bridging the digital divide through ICT training for rural youth.</p>
-      </div>
-
-      <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-default group">
-        <div class="text-5xl mb-6 group-hover:scale-110 transition duration-300">🌍</div>
-        <h4 class="font-bold text-xl mb-3 text-emerald-300">Climate-Smart Farming</h4>
-        <p class="text-stone-300 text-sm">Adaptive agriculture techniques to combat climate change impacts.</p>
-      </div>
-
+            <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/1. Coco Dust Mulching Technology.png" alt="Coco Dust" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
     </div>
-  </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Coco Dust Mulching Technology</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+            <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/2. Compost Pit Technology.png" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Compost Pit Technology</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+             <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/3. Cultivation of 2–3 Seasonal Crops on Raised Beds.png" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Cultivation of 2–3 Seasonal Crops on Raised Beds</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+                       <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">ow-Cost Fish Farming through Water Conservation</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+                               <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/download (2).png" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Rice Seedbed Preparation Technology</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+
+                                   <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Agricultural Mechanization Technology</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+
+                                  <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Polythene Mulching Technology</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+
+                                  <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Integrated Fish and Vegetable Production Technology</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+                                   <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Irrigation Management System</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+                                            <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Hanging Garden Technique</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+                                             <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Vermicompost Production</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+                                            <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Rainwater Harvesting Technology</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+                                             <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Drip Irrigation Technology</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+                                              <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Trellis Method for Vegetable Cultivation</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+                                              <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Model Vegetable Garden (Kalicapur Model)</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+                                             <div class="group bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,32,0.1)] border border-white hover:border-[#1B5E20]/20 transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-24 h-24 bg-[#1B5E20]/5 rounded-full -mr-12 -mt-12 transition-all duration-500 group-hover:scale-150"></div>
+    
+    <div class="w-16 h-16 rounded-2xl bg-[#EEF5EE] flex items-center justify-center mb-6 group-hover:bg-[#1B5E20] transition-all duration-500 transform group-hover:rotate-6 overflow-hidden">
+        <img src="/4. Polythene Mulching Technology.webp" alt="Compost Pit" class="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert">
+    </div>
+    
+    <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#1B5E20]">Improved Polythene Mulching Technology</h3>
+    <p class="text-gray-500 text-sm leading-relaxed mb-4">Utilizing coconut husk dust to retain soil moisture and suppress weed growth.</p>
+    
+    <div class="mt-auto pt-4 flex items-center text-[#F57C00] font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-10px] group-hover:translate-x-0 uppercase">Learn More →</div>
+</div>
+
+        </div>
+    </div>
 </section>
+
 
     <section class="max-w-6xl mx-auto py-24 px-6 text-center">
         <h2 class="text-4xl font-bold mb-16 text-emerald-950">Our Facilities</h2>
@@ -527,6 +884,23 @@
         </div>
     </section>
 
+
+
+                    <section class="mb-20">
+            <h2 class="text-center font-bold text-emerald-900 mb-8 underline decoration-emerald-200 underline-offset-8">Project Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
+                    <img src="/IMG_2747.JPG.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
+                    <img src="/3w.jpg.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
+                    <img src="/2nd phot.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+            </div>
+        </section>
+
     <section class="bg-emerald-950 text-white py-16">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div class="border-r border-emerald-800">
@@ -565,46 +939,39 @@
 
 <div class="bg-[#F9FAFB] text-slate-900">
 
-    <section class="relative min-h-[600px] flex items-center justify-center px-6 py-12 overflow-hidden bg-emerald-950">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-800 rounded-full mix-blend-screen filter blur-3xl opacity-20"></div>
-        <div class="absolute bottom-0 left-0 w-72 h-72 bg-orange-900 rounded-full mix-blend-screen filter blur-3xl opacity-10"></div>
+<section class="relative min-h-[650px] flex items-center justify-center text-center text-white px-6 py-16 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/ADRBanne.jpeg')] bg-cover bg-center transition-transform duration-1000 hover:scale-105">
+        <div class="absolute inset-0 "></div>
+    </div>
 
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
-            <div class="text-left order-2 lg:order-1">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                    Legal Aid, Land Rights, <br class="hidden md:block"> 
-                    <span class="text-emerald-400">& Child Protection</span>
-                </h1>
-                <p class="text-lg md:text-xl text-emerald-100/80 mb-8 max-w-xl leading-relaxed">
-                    Empowering vulnerable communities with access to justice, child welfare, and social harmony.
-                </p>
-                
-                <div class="flex flex-col gap-3 text-white/90 font-medium">
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                        Legal Aid & Land Rights
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 bg-orange-400 rounded-full"></span>
-                        Child Protection & Rights
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 bg-blue-400 rounded-full"></span>
-                        Peacebuilding & Social Harmony
-                    </div>
-                </div>
-            </div>
+    <div class="relative z-10 max-w-5xl mx-auto h-[500px] flex flex-col justify-between items-center">
+        
+        <div class="w-full">
+            
+            <h1 class="text-2xl md:text-[43px] mt-[-40px] font-black tracking-tight leading-tight uppercase drop-shadow-lg text-[#546B41] [text-shadow:_0px_4px_8px_#ffffff]">
+                Legal Aid, Land Rights, 
+                <span class="text-[#546B41] block md:inline"> & Child Protection</span>
+            </h1>
+        </div>
 
-            <div class="order-1 lg:order-2 flex justify-center">
-                <div class="relative w-full max-w-md lg:max-w-full">
-                    <div class="rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10">
-                        <img src="/IMG_202.jpeg" alt="Empowerment" class="w-full h-auto object-contain bg-emerald-900/50">
-                    </div>
-                    <div class="absolute -z-10 -bottom-4 -right-4 w-full h-full border-2 border-emerald-500/30 rounded-[2rem]"></div>
-                </div>
+        <div class="w-full">
+            <p class="text-lg md:text-2xl mb-10 text-stone-200 font-light italic max-w-3xl mx-auto leading-relaxed">
+                Empowering vulnerable communities with <span class="text-white font-semibold underline decoration-orange-500">access to justice</span>, child welfare, and social harmony.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button class="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-full font-bold text-lg shadow-2xl transition-all transform hover:scale-105 active:scale-95 w-full sm:w-auto">
+                    Get Legal Support
+                </button>
+                <button class="bg-transparent border-2 border-white/30 hover:border-white hover:bg-white/10 text-white px-10 py-4 rounded-full font-bold text-lg transition-all w-full sm:w-auto">
+                    Learn More
+                </button>
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
+
 
     <section class="py-20 px-6 max-w-7xl mx-auto">
         <div class="bg-white rounded-[3rem] p-8 md:p-16 shadow-xl shadow-emerald-900/5 border border-emerald-50 border-emerald-100">
@@ -651,14 +1018,14 @@
                 <p class="text-slate-500 mb-8 italic">Promoting justice and securing land rights for marginalized people.</p>
                 <div class="space-y-4">
                     <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm">
-                        <span class="text-2xl">📢</span>
+                        <span class="text-2xl"><img src="/pngtree-modern-red-web-icon-for-legal-advice-against-png-image_10716266.png" alt="" class="w-[50px] rounded-full mb-2"></span>
                         <div>
                             <h4 class="font-bold">Legal Awareness</h4>
                             <p class="text-sm text-slate-500">Community workshops on legal rights and processes.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm">
-                        <span class="text-2xl">📑</span>
+                        <span class="text-2xl"> <img src="/Land Right.jpeg" alt="" class="w-[50px] rounded-full mb-2"> </span>
                         <div>
                             <h4 class="font-bold">Land Rights Support</h4>
                             <p class="text-sm text-slate-500">Advocacy for indigenous land and property rights.</p>
@@ -679,21 +1046,21 @@
                 <p class="text-slate-500 mb-8 italic">Creating a safe and nurturing environment for every child.</p>
                 <div class="space-y-4">
                     <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm">
-                        <span class="text-2xl">🎓</span>
+                        <span class="text-2xl"> <img src="/WhatsApp Image 2026-04-06 at 1.00.29 AM.jpeg" alt="" class="w-[50px] rounded-full mb-2"></span>
                         <div>
                             <h4 class="font-bold">Child Safety Education</h4>
                             <p class="text-sm text-slate-500">Workshops on child rights, safety, and wellbeing.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm">
-                        <span class="text-2xl">🚫</span>
+                        <span class="text-2xl"> <img src="/WhatsApp Image 2026-04-06 at 1.00.18 AM.jpeg" alt="" class="w-[50px] rounded-full mb-2"></span>
                         <div>
                             <h4 class="font-bold">Prevention of Child Marriage</h4>
                             <p class="text-sm text-slate-500">Early intervention and family counseling.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm">
-                        <span class="text-2xl">🤝</span>
+                        <span class="text-2xl"> <img src="/WhatsApp Image 2026-04-06 at 1.00.47 AM.jpeg" alt="" class="w-[50px] rounded-full mb-2"></span>
                         <div>
                             <h4 class="font-bold">Support & Counseling</h4>
                             <p class="text-sm text-slate-500">Assistance for vulnerable and at-risk children.</p>
@@ -704,6 +1071,21 @@
 
         </div>
     </section>
+
+                        <section class="mb-20">
+            <h2 class="text-center font-bold text-emerald-900 mb-8 underline decoration-emerald-200 underline-offset-8">Project Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
+                    <img src="/WhatsApp Image 2025-08-29 at 01.04.40_fcb55fdd.jpg.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
+                    <img src="/IMG_20250428_102649.jpg.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl h-[250px] shadow-lg">
+                    <img src="/IMG_2597.JPG.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+            </div>
+        </section>
 
     <section class="py-20 px-6">
         <div class="max-w-5xl mx-auto rounded-[3rem] bg-slate-900 p-8 md:p-16 text-center text-white relative overflow-hidden">

@@ -1,5 +1,5 @@
 <!-- ================= FOCUS AREA ================= -->
-  <section class="py-16 bg-emerald-900 text-white">
+  <section class="py-16 bg-[#1B5E20] text-white">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-center">Strategic Focus Areas</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -387,10 +387,26 @@
 </script>
 
 
-<div onclick="openWomenEmpowermentModal()" class="cursor-pointer bg-white/10 p-6 rounded-xl backdrop-blur-sm hover:bg-white/20 transition-all duration-300 border border-white/5 group flex flex-col items-center text-center">
-  <img src="/Women Empowerme.png" alt="" class="w-[50px] mb-2">
-  <h4 class="font-bold text-xl mb-2 text-white">Women Empowerment</h4>
-  <p class="text-sm text-white/80">Economic and social upliftment for women & adolescent girls.</p>
+<div onclick="openWomenEmpowermentModal()" 
+     class="cursor-pointer bg-white/10 p-6 rounded-xl backdrop-blur-md 
+            /* Border highlight (Always visible) */
+            border border-white/30 
+            /* Glow Shadow (Always visible) */
+            shadow-[0_0_20px_rgba(255,255,255,0.1)] 
+            /* Hover Effects */
+            hover:bg-white/20 hover:border-orange-400/60 hover:shadow-[0_0_25px_rgba(251,146,60,0.3)]
+            transition-all duration-500 group flex flex-col items-center text-center">
+            
+  <img src="/Women Empowerme.png" alt="" class="w-[50px] mb-3 group-hover:scale-110 transition-transform duration-300">
+  
+  <h4 class="font-bold text-xl mb-2 text-white group-hover:text-orange-400 transition-colors">
+    Women Empowerment
+  </h4>
+  
+  <p class="text-sm text-white/80 leading-relaxed">
+    Economic and social upliftment for women & adolescent girls.
+  </p>
+  
 </div>
 
 <div id="womenEmpowermentModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-rose-950/40 backdrop-blur-md">
