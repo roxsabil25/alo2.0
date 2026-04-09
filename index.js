@@ -181,6 +181,20 @@ app.get('/project', async (req,res)=>{
     res.render("user/project");
 });
 
+
+app.get('/donate', async (req,res)=>{
+    
+    res.render("user/donate");
+});
+
+
+app.get('/contact', async (req,res)=>{
+    
+    res.render("user/contact");
+});
+
+
+
 app.get('/healthz', (req, res) => {
   res.status(200).send("OK");
 });
