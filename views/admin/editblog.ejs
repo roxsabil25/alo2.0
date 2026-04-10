@@ -1,0 +1,157 @@
+<%- include('../user/partials/header') %>
+
+<div class="flex flex-col md:flex-row min-h-screen bg-[#F8FAFC]">
+    <%- include('./partials/sidebar') %>
+
+    <main class="flex-1 p-4 md:p-10">
+        
+        <div class="max-w-4xl mx-auto mb-8 flex justify-between items-end">
+            <div>
+                <nav class="flex text-xs text-gray-400 mb-2">
+                    <span>Admin</span>
+                    <span class="mx-2">/</span>
+                    <span class="text-green-600 font-bold">Edit Post</span>
+                </nav>
+                <h1 class="text-2xl font-bold text-gray-900">Edit storys Post</h1>
+                <p class="text-gray-500 text-sm">Update the details of your story below.</p>
+            </div>
+            <a href="/admin/storys" class="text-sm font-semibold text-gray-600 hover:text-green-700 transition-colors">
+                <i class="fa-solid fa-xmark mr-1"></i> Cancel Editing
+            </a>
+        </div>
+
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-200">
+            <form action="/stories/edit/<%= storys._id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="p-6 md:p-10 space-y-6">
+                
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">storys Title</label>
+                    <input type="text" name="title" value="<%= storys.title %>" required 
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500/20 focus:border-green-600 focus:outline-none transition-all text-gray-800"
+                        placeholder="Enter storys title...">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Category</label>
+                        <select name="category" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500/20 focus:border-green-600 focus:outline-none bg-white cursor-pointer">
+                            <option value="Agriculture" <%= storys.category === 'Agriculture' ? 'selected' : '' %>>Agriculture</option>
+                            <option value="Education" <%= storys.category === 'Education' ? 'selected' : '' %>>Education</option>
+                            <option value="Community" <%= storys.category === 'Community' ? 'selected' : '' %>>Community</option>
+                            <option value="Success Story" <%= storys.category === 'Success Story' ? 'selected' : '' %>>Success Story</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Change Featured Image (Optional)</label>
+                        <input type="file" name="featuredImage" accept="image/*"
+                            class="w-full text-sm text-gray-500 file:mr-4 file:py-2.5 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100 cursor-pointer border border-gray-300 rounded-xl py-1 px-2">
+                        
+                        <div class="mt-4 flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100">
+                            <img src="<%= storys.featuredImage %>" alt="Current Image" class="w-16 h-16 object-cover rounded-lg shadow-sm">
+                            <div class="text-[10px] text-gray-400 uppercase font-bold tracking-wider">
+                                Current Image
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Short Summary</label>
+                    <textarea name="excerpt" rows="2" required
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500/20 focus:border-green-600 focus:outline-none transition-all"
+                        placeholder="A brief introduction..."><%= storys.excerpt %></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Main Content</label>
+                    <div class="rounded-xl overflow-hidden border border-gray-300">
+                        <textarea id="editor" name="content"><%= storys.content %></textarea>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 pt-6 border-t border-gray-50">
+                    <button type="submit" 
+                        class="bg-green-700 text-white px-10 py-3.5 rounded-xl font-bold hover:bg-green-800 transition-all shadow-lg shadow-green-100">
+                        Update Post
+                    </button>
+                    <a href="/admin/storys" 
+                        class="bg-white text-gray-500 border border-gray-200 px-8 py-3.5 rounded-xl font-bold hover:bg-gray-50 transition-all">
+                        Back to List
+                    </a>
+                    
+                    <div class="ml-auto flex items-center gap-2">
+                         <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Status:</span>
+                         <span class="px-3 py-1 bg-green-100 text-green-700 text-[10px] font-black rounded-full uppercase">
+                            <%= storys.status || 'Published' %>
+                         </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor.create(document.querySelector('#editor'), {
+        toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote', 'undo', 'redo']
+    }).catch(error => { console.error(error); });
+</script>
+
+<style>
+    /* CKEditor Custom Styling */
+    .ck-editor__editable { min-height: 400px !important; border: none !important; }
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) { border: none !important; }
+    .ck.ck-toolbar { border: none !important; border-bottom: 1px solid #E2E8F0 !important; background: #F8FAFC !important; }
+</style>
+
+<style>
+    /* CKEditor Content Reset for Tailwind */
+    .ck-content {
+        font-family: 'Inter', sans-serif; /* বা আপনার পছন্দের ফন্ট */
+        line-height: 1.6;
+    }
+
+    /* Bold & Italic Fix */
+    .ck-content strong, .ck-content b {
+        font-weight: bold !important;
+    }
+    .ck-content i, .ck-content em {
+        font-style: italic !important;
+    }
+
+    /* Lists Fix (সবচেয়ে গুরুত্বপূর্ণ) */
+    .ck-content ul {
+        list-style-type: disc !important;
+        margin-left: 1.5rem !important;
+        padding-left: 1rem !important;
+    }
+    .ck-content ol {
+        list-style-type: decimal !important;
+        margin-left: 1.5rem !important;
+        padding-left: 1rem !important;
+    }
+    .ck-content li {
+        display: list-item !important;
+    }
+
+    /* Blockquote Fix */
+    .ck-content blockquote {
+        border-left: 4px solid #15803d !important; /* Green border */
+        background: #f0fdf4 !important;
+        padding: 10px 20px !important;
+        font-style: italic !important;
+        margin: 1rem 0 !important;
+    }
+
+    /* Header Styles inside Editor */
+    .ck-content h2 { font-size: 1.5rem; font-weight: bold; margin-top: 1rem; }
+    .ck-content h3 { font-size: 1.25rem; font-weight: bold; margin-top: 0.8rem; }
+
+    /* CKEditor Custom UI Layout */
+    .ck-editor__editable { min-height: 350px !important; border: none !important; padding: 20px !important; }
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) { border: none !important; }
+    .ck.ck-toolbar { border: none !important; border-bottom: 1px solid #f1f5f9 !important; background: #f8fafc !important; }
+</style>
+
+<%- include('../user/partials/footer') %>

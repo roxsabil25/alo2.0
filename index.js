@@ -20,6 +20,7 @@ const upload = require("./config/multer");
 // admin model
 let adminModel = require("./model/admin");
 let projectModel = require("./model/project");
+let blog = require("./model/Blog");
 
 // View Engine
 app.set("view engine", "ejs");
@@ -194,10 +195,104 @@ app.get('/contact', async (req,res)=>{
 });
 
 
+app.get('/review', async (req,res)=>{
+    
+    res.render("user/review");
+});
+
+
+app.get('/blog', async (req,res)=>{
+     let blogs = await blog.find()
+    res.render("user/blog", {blogs});
+});
+
+
+
+app.get('/stories/:id', async (req,res)=>{
+     let storys = await blog.findOne({_id:req.params.id});
+     console.log(storys);
+    res.render("user/showBlog", {storys});
+});
+
+
+
+app.get('/admin/blog/add', async (req,res)=>{
+
+    const blogs = await blog.find();
+     
+    res.render("admin/addblog", { blogs });
+});
+
+
+
+app.post('/admin/blog/create', upload.single('featuredImage'), async (req, res) => {
+    try {
+        const { title, category, excerpt, content, status } = req.body;
+        
+        const newBlog = new blog({
+            title,
+            category,
+            excerpt,
+            content,
+            featuredImage: `/uploads/blogs/${req.file.filename}`,
+            isPublished: status === 'published' ? true : false
+        });
+
+        await newBlog.save();
+        res.redirect('/admin/blog/add'); // সাকসেস হলে লিস্ট পেজে পাঠাবে
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Blog creation failed!");
+    }
+});
+
+
+
+app.get('/stories/delete/:id', async (req,res)=>{
+
+        await blog.findByIdAndDelete(req.params.id);    
+
+        res.send("BLOGS DELETED");
+});
+
+
+
+app.get('/stories/edit/:id', async (req,res)=>{
+
+            let storys = await blog.findOne({_id:req.params.id});    
+        
+        res.render("admin/editblog", { storys });
+});
+
+app.post('/stories/edit/:id', upload.single('featuredImage'), async (req, res) => {
+    try {
+        const { title, category, excerpt, content, status } = req.body;
+        const updateData = {
+            title,
+            category,
+            excerpt,
+            content,
+            isPublished: status === 'published' ? true : false
+        };  
+
+        if (req.file) {
+            updateData.featuredImage = `/uploads/blogs/${req.file.filename}`;
+        }
+
+        await blog.findByIdAndUpdate(req.params.id, updateData);
+        res.redirect('/admin/blog/add'); // সাকসেস হলে লিস্ট পেজে পাঠাবে
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Blog update failed!");
+    }   
+});
+
+
 
 app.get('/healthz', (req, res) => {
   res.status(200).send("OK");
-});
+});     
+
 // Server Start
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

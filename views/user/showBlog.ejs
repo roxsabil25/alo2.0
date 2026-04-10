@@ -1,0 +1,128 @@
+<%- include('partials/header') %>
+
+<article class="bg-white min-h-screen font-sans antialiased text-gray-900">
+    <nav class="border-b border-gray-50 sticky top-0 bg-white/90 backdrop-blur-sm z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/blog" class="text-sm font-bold text-gray-400 hover:text-green-600 transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-chevron-left text-[10px]"></i> Back
+            </a>
+            <div class="flex gap-4">
+                <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors"><i class="fab fa-facebook-f text-sm"></i></a>
+                <a href="#" class="text-gray-400 hover:text-green-500 transition-colors"><i class="fab fa-whatsapp text-sm"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-3xl mx-auto px-6 pt-12 md:pt-20">
+        
+        <div class="flex items-center gap-3 mb-6">
+            <span class="text-[10px] font-black uppercase tracking-widest text-green-700 bg-green-50 px-3 py-1 rounded">
+                <%= storys.category %>
+            </span>
+            <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+            <span class="text-xs font-bold text-gray-400">
+                <%= new Date(storys.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) %>
+            </span>
+        </div>
+
+        <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-8 tracking-tight">
+            <%= storys.title %>
+        </h1>
+
+        <div class="flex items-center gap-3 mb-12 group">
+            <img src="https://ui-avatars.com/api/?name=Masudur+Rahman&bg=f3f4f6&color=1B5E20" class="w-10 h-10 rounded-full grayscale group-hover:grayscale-0 transition-all duration-500">
+            <div>
+                <p class="text-xs font-black text-gray-900">Masudur Rahman</p>
+                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Director, ALO</p>
+            </div>
+        </div>
+
+        <figure class="mb-16">
+            <img src="<%= storys.featuredImage %>" 
+                 alt="<%= storys.title %>" 
+                 class="w-full h-auto max-h-[500px] object-cover rounded-2xl border border-gray-100 shadow-sm">
+        </figure>
+
+        <div class="prose prose-lg prose-flat mx-auto mb-20">
+            <%- storys.content %>
+        </div>
+
+        <footer class="border-t border-gray-100 pt-10 pb-20 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex gap-2">
+                <% if(storys.tags && storys.tags.length > 0) { %>
+                    <% storys.tags.forEach(function(tag){ %>
+                        <span class="text-[11px] font-bold text-gray-400 hover:text-green-600 cursor-pointer">#<%= tag %></span>
+                    <% }) %>
+                <% } else { %>
+                    <span class="text-[11px] font-bold text-gray-400">#Impact</span>
+                    <span class="text-[11px] font-bold text-gray-400">#Community</span>
+                <% } %>
+            </div>
+            
+            <button class="bg-gray-900 text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest hover:bg-green-700 transition-all">
+                Share This Story
+            </button>
+        </footer>
+    </div>
+</article>
+
+<style>
+    /* Minimal Typography */
+    .prose-flat {
+        color: #374151; /* text-gray-700 */
+        line-height: 1.8;
+        font-size: 1.1rem;
+    }
+
+    .prose-flat h2 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #111827;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .prose-flat p {
+        margin-bottom: 1.5rem;
+    }
+
+    .prose-flat strong {
+        color: #111827;
+        font-weight: 700;
+    }
+
+    .prose-flat ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .prose-flat ul li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .prose-flat ul li::before {
+        content: "•";
+        color: #10b981;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+    }
+
+    .prose-flat blockquote {
+        border-left: 2px solid #e5e7eb;
+        padding-left: 1.5rem;
+        font-style: italic;
+        color: #6b7280;
+        margin: 2rem 0;
+    }
+
+    .prose-flat img {
+        border-radius: 1rem;
+        margin: 2rem 0;
+    }
+</style>
+
+<%- include('partials/footer') %>
