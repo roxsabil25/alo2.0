@@ -224,6 +224,14 @@ app.get('/admin/blog/add', async (req,res)=>{
 });
 
 
+app.get('/admin/blog/create', async (req,res)=>{
+
+    
+     
+    res.redirect("/admin/blog/add");
+});
+
+
 
 app.post('/admin/blog/create', upload.single('featuredImage'), async (req, res) => {
     try {
