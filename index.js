@@ -13,7 +13,6 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected ✅"))
   .catch(err => console.log(err));
-
   //multer config
 const upload = require("./config/multer");
 
@@ -249,8 +248,9 @@ app.post('/admin/blog/create', upload.single('featuredImage'), async (req, res) 
         await newBlog.save();
         res.redirect('/admin/blog/add'); // সাকসেস হলে লিস্ট পেজে পাঠাবে
     } catch (err) {
-        console.error(err);
-        res.status(500).send("Blog creation failed!");
+        console.error("Database Error:", err); // কনসোলে ডিটেইল দেখার জন্য
+        // .send() এ দুটি আর্গুমেন্ট কাজ করে না, এভাবে লিখুন:
+        res.status(500).send(`Blog creation failed! Error: ${err.message}`);
     }
 });
 

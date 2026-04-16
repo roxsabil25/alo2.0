@@ -6,12 +6,7 @@ const blogSchema = new mongoose.Schema({
         required: [true, "ব্লগের শিরোনাম অবশ্যই দিতে হবে"],
         trim: true
     },
-    slug: {
-        type: String,
-        required: true,
-        unique: true, // URL-এ ব্যবহারের জন্য (যেমন: my-blog-post)
-        lowercase: true
-    },
+
     content: {
         type: String, 
         required: [true, "ব্লগের মূল কন্টেন্ট লিখুন"] // এখানে HTML বা Markdown স্ট্রিং হিসেবে ডাটা সেভ হবে
@@ -48,14 +43,14 @@ const blogSchema = new mongoose.Schema({
 });
 
 // শিরোনাম থেকে অটো স্লাগ জেনারেট করার জন্য মিডলওয়্যার (ঐচ্ছিক)
-blogSchema.pre('validate', async function() {
-    if (this.title) {
-        this.slug = this.title
-            .toLowerCase()
-            .trim() // দুই পাশের বাড়তি স্পেস বাদ দেবে
-            .replace(/[^\w\s-]/g, '') // স্পেশাল ক্যারেক্টার বাদ দেবে
-            .replace(/\s+/g, '-');    // স্পেসকে ড্যাশ দিয়ে রিপ্লেস করবে
-    }
+// blogSchema.pre('validate', async function() {
+//     if (this.title) {
+//         this.slug = this.title
+//             .toLowerCase()
+//             .trim() // দুই পাশের বাড়তি স্পেস বাদ দেবে
+//             .replace(/[^\w\s-]/g, '') // স্পেশাল ক্যারেক্টার বাদ দেবে
+//             .replace(/\s+/g, '-');    // স্পেসকে ড্যাশ দিয়ে রিপ্লেস করবে
+//     }
     
-});
+// });
 module.exports = mongoose.model('Blog', blogSchema);
